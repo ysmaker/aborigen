@@ -13,4 +13,10 @@ body
 .workspace
 {
 	padding: 35px;
+	display: flex;
+	justify-content: flex-start;
+}
+.workspace__right
+{
+	flex-grow: 1;
 }
