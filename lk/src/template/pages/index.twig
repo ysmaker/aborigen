@@ -4,7 +4,11 @@
 	<div class="wrapper">
 		{% include "../blocks/sidebar.twig" %}
 		<div class="main">
-			{# {% include "../blocks/header.twig" %} #}
+			{% include "../blocks/top-bar.twig" %}
+			<div class="workspace">
+				{% include "../blocks/tasks.twig" %}
+				
+			</div>
 		</div>
 	</div>
 {% endblock %}
