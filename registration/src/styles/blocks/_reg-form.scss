@@ -1,0 +1,52 @@
+.reg-form
+{
+	padding: 83px;
+	padding-bottom: 25px;
+}
+.reg-form__logo
+{
+	margin-bottom: 85px;
+}
+.reg-form__title
+{
+	font-family: $bold;
+	font-size: 36px;
+	line-height: 42px;
+	letter-spacing: -0.03em;
+	color: $dark-blue;
+	margin-bottom: 29px;
+}
+.reg-form__descr
+{
+	font-family: $regular;
+	font-size: 18px;
+	line-height: 25px;
+	color: $dark-blue;
+	margin-bottom: 40px;
+}
+.reg-form__form
+{
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+}
+.reg-form__form-label
+{
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	background-color: #FFFFFF;
+	border: 1px solid #C1BBBB;
+	&:not(:last-child)
+	{
+		border-bottom: none;
+	}
+}
+.reg-form__form-input
+{
+	outline: none;
+	border: none;
+	padding: 12px 27px;
+}
