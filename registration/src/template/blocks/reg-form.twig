@@ -9,25 +9,36 @@
 		Пожалуйста введите ваши данные для входа
 	</div>
 	<form action="" class="reg-form__form">
-		<label for="" class="reg-form__form-label">
-			Email Address
-			<input type="email" class="reg-form__form-input">
-		</label>
-		<label for="" class="reg-form__form-label">
-			Password
-			<input type="password" class="reg-form__form-input">
-		</label>
-		<label for="" class="reg-form__form-label">
-			Confirm password
-			<input type="password" class="reg-form__form-input">
-		</label>
-		<label for="">
-			<input type="checkbox">
-			Согласен с обработкой персональных данных
-		</label>
-		<input type="submit">
+		<div class="reg-form__wr">
+			<label for="" class="reg-form__form-label">
+				Email Address
+				<input type="email" class="reg-form__form-input">
+				<span></span>
+			</label>
+			<label for="" class="reg-form__form-label">
+				Password
+				<input type="password" placeholder="*******************" class="reg-form__form-input">
+				<span></span>
+			</label>
+			<label for="" class="reg-form__form-label">
+				Confirm password
+				<input type="password" placeholder="*******************" class="reg-form__form-input">
+				<span></span>
+			</label>
+		</div>
+		<div class="reg-form__form-checkbox">
+			<label for="check"class="reg-form__form-checkbox-label">
+				<input type="checkbox" id="check" class="reg-form__form-checkbox-input">
+				<span></span>
+				Согласен с обработкой персональных данных
+			</label>
+		</div>
+		<button type="submit" class="reg-form__form-submit">
+			Вход →
+		</button>
 		<div class="reg-form__auth">
-			У вас есть аккаунт? <a href="#">Войдите под своими данными</a>
+			У вас есть аккаунт? <a href="#" class="reg-form__auth-link">Войдите под своими данными</a>
+			<span></span>
 		</div>
 		<div class="reg-form__bottom">
 			<a href="#">Политика конфиденциальности</a>
