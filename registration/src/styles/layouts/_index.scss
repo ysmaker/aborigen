@@ -1,0 +1,16 @@
+.main
+{
+	display: flex;
+	align-items: center;
+}
+.main__left
+{
+	max-width: 50vw;
+	width: 100%;
+	flex-grow: 1;
+}
+.main__right
+{
+	max-width: 50vw;
+	width: 100%;
+}
