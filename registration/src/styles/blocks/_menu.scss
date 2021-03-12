@@ -1,0 +1,44 @@
+.menu
+{
+	height: 100vh;
+	box-sizing: border-box;
+	position: relative;
+	padding: 24px 83px;
+	background-color: rgba(244, 244, 244, 0.6);
+}
+.menu__img
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.menu__nav
+{
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	padding: 0;
+}
+.menu__nav-item
+{
+	position: relative;
+	font-family: $regular;
+	font-size: 24px;
+	line-height: 33px;
+	color: #000000;
+	cursor: pointer;
+	&:hover
+	{
+		&:after
+		{
+			content: '';
+			position: absolute;
+			bottom: -11px;
+			left: 0;
+			height: 3px;
+			width: 69px;
+			background-color: #FFAE00;
+		}
+	}
+}
