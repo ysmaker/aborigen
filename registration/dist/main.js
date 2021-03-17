@@ -10099,7 +10099,6 @@ __webpack_require__.r(__webpack_exports__);
 
 // Import scripts
 
-// console.log('complete');
 
 /***/ }),
 
@@ -10118,16 +10117,23 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 $(document).ready(function () {
-	Abo.init();
+	abo.init();
 });
 
-var Abo = {
+var abo = {
 	init() {
 		this.test();
 	},
 
 	test: function () {
-		console.log('hello');
+		console.log($('.menu__nav'));
+	},
+	signUp: function (instance) {
+		event.preventDefault();
+		console.log($('.menu__nav'));
+	},
+	logIn: function (instance) {
+		console.log('Авторизация');
 	}
 };
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery/dist/jquery.min.js */ "./node_modules/jquery/dist/jquery.min.js")))
@@ -10145,6 +10151,23 @@ var Abo = {
 
 /***/ }),
 
+/***/ "./src/template/blocks/menu.twig":
+/*!***************************************!*\
+  !*** ./src/template/blocks/menu.twig ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var twig = __webpack_require__(/*! twig */ "./node_modules/twig/twig.js").twig,
+    tokens = [{"type":"raw","value":"<section class=\"menu\">\n\t<ul class=\"menu__nav\">\n\t\t<li class=\"menu__nav-item\">\n\t\t\tГлавная\n\t\t</li>\n\t\t<li class=\"menu__nav-item\">\n\t\t\tО нас\n\t\t</li>\n\t\t<li class=\"menu__nav-item\">\n\t\t\tБлог\n\t\t</li>\n\t\t<li class=\"menu__nav-item\">\n\t\t\tТарифы\n\t\t</li>\n\t\t<li class=\"menu__nav-item\">\n\t\t\tКонтакты\n\t\t</li>\n\t</ul>\n\t<img src=\"../img/left-bg.svg\" class=\"menu__img\" alt=\"\">\n</section>"}],
+    template = twig({"id":"$resolved:db99fe476fbb20fe7b1e092c61f4332780b8455c93709d4e6a279f1f7715d2462be5f7fba400d8b9bc2846e2677f7bbd82431a278e91ae748b6531eb26b317f4:menu.twig","data":[{"type":"raw","value":"<section class=\"menu\">\n\t<ul class=\"menu__nav\">\n\t\t<li class=\"menu__nav-item\">\n\t\t\tГлавная\n\t\t</li>\n\t\t<li class=\"menu__nav-item\">\n\t\t\tО нас\n\t\t</li>\n\t\t<li class=\"menu__nav-item\">\n\t\t\tБлог\n\t\t</li>\n\t\t<li class=\"menu__nav-item\">\n\t\t\tТарифы\n\t\t</li>\n\t\t<li class=\"menu__nav-item\">\n\t\t\tКонтакты\n\t\t</li>\n\t</ul>\n\t<img src=\"../img/left-bg.svg\" class=\"menu__img\" alt=\"\">\n</section>"}],"allowInlineIncludes":true,"rethrow":true});
+
+module.exports = function(context) { return template.render(context); }
+
+module.exports.tokens = tokens;
+
+/***/ }),
+
 /***/ "./src/template/blocks/reg-form.twig":
 /*!*******************************************!*\
   !*** ./src/template/blocks/reg-form.twig ***!
@@ -10153,8 +10176,8 @@ var Abo = {
 /***/ (function(module, exports, __webpack_require__) {
 
 var twig = __webpack_require__(/*! twig */ "./node_modules/twig/twig.js").twig,
-    tokens = [{"type":"raw","value":"<section class=\"reg-form\">\n\t<div class=\"reg-form__logo\">\n\t\t<img src=\"../img/logo.svg\" alt=\"\">\n\t</div>\n\t<div class=\"reg-form__title\">\n\t\tРегистрация\n\t</div>\n\t<div class=\"reg-form__descr\">\n\t\tПожалуйста введите ваши данные для входа\n\t</div>\n\t<form action=\"\" class=\"reg-form__form\">\n\t\t<div class=\"reg-form__wr\">\n\t\t\t<label for=\"\" class=\"reg-form__form-label\">\n\t\t\t\tEmail Address\n\t\t\t\t<input type=\"email\" class=\"reg-form__form-input\">\n\t\t\t\t<span></span>\n\t\t\t</label>\n\t\t\t<label for=\"\" class=\"reg-form__form-label\">\n\t\t\t\tPassword\n\t\t\t\t<input type=\"password\" placeholder=\"*******************\" class=\"reg-form__form-input\">\n\t\t\t\t<span></span>\n\t\t\t</label>\n\t\t\t<label for=\"\" class=\"reg-form__form-label\">\n\t\t\t\tConfirm password\n\t\t\t\t<input type=\"password\" placeholder=\"*******************\" class=\"reg-form__form-input\">\n\t\t\t\t<span></span>\n\t\t\t</label>\n\t\t</div>\n\t\t<div class=\"reg-form__form-check-wr\">\n\t\t\t<label for=\"check\"class=\"reg-form__form-checkbox-label\">\n\t\t\t\t<input type=\"checkbox\" id=\"check\" class=\"reg-form__form-checkbox\">\n\t\t\t\tСогласен с обработкой персональных данных\n\t\t\t</label>\n\t\t</div>\n\t\t<button type=\"submit\" class=\"reg-form__form-submit\">\n\t\t\tВход →\n\t\t</button>\n\t\t<div class=\"reg-form__auth\">\n\t\t\tУ вас есть аккаунт? <a href=\"#\" class=\"reg-form__auth-link\">Войдите под своими данными</a>\n\t\t</div>\n\t\t<div class=\"reg-form__bottom\">\n\t\t\t<a href=\"#\">Политика конфиденциальности</a>\n\t\t\t<a href=\"#\">Правила использования</a>\n\t\t</div>\n\t</form>\n</section>"}],
-    template = twig({"id":"$resolved:3cb40fc6eecc60a0a48f5dbfed58207b2d5e3b44bb0848250ecda41d1db1b7fe4737a7f98e275d56fa737e67b03446bedbf7a7e2b7da48e6eb52c8e22cf23646:reg-form.twig","data":[{"type":"raw","value":"<section class=\"reg-form\">\n\t<div class=\"reg-form__logo\">\n\t\t<img src=\"../img/logo.svg\" alt=\"\">\n\t</div>\n\t<div class=\"reg-form__title\">\n\t\tРегистрация\n\t</div>\n\t<div class=\"reg-form__descr\">\n\t\tПожалуйста введите ваши данные для входа\n\t</div>\n\t<form action=\"\" class=\"reg-form__form\">\n\t\t<div class=\"reg-form__wr\">\n\t\t\t<label for=\"\" class=\"reg-form__form-label\">\n\t\t\t\tEmail Address\n\t\t\t\t<input type=\"email\" class=\"reg-form__form-input\">\n\t\t\t\t<span></span>\n\t\t\t</label>\n\t\t\t<label for=\"\" class=\"reg-form__form-label\">\n\t\t\t\tPassword\n\t\t\t\t<input type=\"password\" placeholder=\"*******************\" class=\"reg-form__form-input\">\n\t\t\t\t<span></span>\n\t\t\t</label>\n\t\t\t<label for=\"\" class=\"reg-form__form-label\">\n\t\t\t\tConfirm password\n\t\t\t\t<input type=\"password\" placeholder=\"*******************\" class=\"reg-form__form-input\">\n\t\t\t\t<span></span>\n\t\t\t</label>\n\t\t</div>\n\t\t<div class=\"reg-form__form-check-wr\">\n\t\t\t<label for=\"check\"class=\"reg-form__form-checkbox-label\">\n\t\t\t\t<input type=\"checkbox\" id=\"check\" class=\"reg-form__form-checkbox\">\n\t\t\t\tСогласен с обработкой персональных данных\n\t\t\t</label>\n\t\t</div>\n\t\t<button type=\"submit\" class=\"reg-form__form-submit\">\n\t\t\tВход →\n\t\t</button>\n\t\t<div class=\"reg-form__auth\">\n\t\t\tУ вас есть аккаунт? <a href=\"#\" class=\"reg-form__auth-link\">Войдите под своими данными</a>\n\t\t</div>\n\t\t<div class=\"reg-form__bottom\">\n\t\t\t<a href=\"#\">Политика конфиденциальности</a>\n\t\t\t<a href=\"#\">Правила использования</a>\n\t\t</div>\n\t</form>\n</section>"}],"allowInlineIncludes":true,"rethrow":true});
+    tokens = [{"type":"raw","value":"<section class=\"reg-form\">\n\t<div class=\"reg-form__logo\">\n\t\t<img src=\"../img/logo.svg\" alt=\"\">\n\t</div>\n\t<div class=\"reg-form__main\">\n\t\t<div class=\"reg-form__title\">\n\t\t\tРегистрация\n\t\t</div>\n\t\t<div class=\"reg-form__descr\">\n\t\t\tПожалуйста введите ваши данные для входа\n\t\t</div>\n\t\t<form action=\"\" class=\"reg-form__form\" onsubmit=\"abo.test()\">\n\t\t\t<div class=\"reg-form__wr\">\n\t\t\t\t<label for=\"\" class=\"reg-form__form-label\">\n\t\t\t\t\tEmail Address\n\t\t\t\t\t<input type=\"email\" class=\"reg-form__form-input\">\n\t\t\t\t\t<span></span>\n\t\t\t\t</label>\n\t\t\t\t<label for=\"\" class=\"reg-form__form-label\">\n\t\t\t\t\tPassword\n\t\t\t\t\t<input type=\"password\" placeholder=\"*******************\" class=\"reg-form__form-input\">\n\t\t\t\t\t<span></span>\n\t\t\t\t</label>\n\t\t\t\t<label for=\"\" class=\"reg-form__form-label\">\n\t\t\t\t\tConfirm password\n\t\t\t\t\t<input type=\"password\" placeholder=\"*******************\" class=\"reg-form__form-input\">\n\t\t\t\t\t<span></span>\n\t\t\t\t</label>\n\t\t\t</div>\n\t\t\t<div class=\"reg-form__form-checkbox\">\n\t\t\t\t<label for=\"check\"class=\"reg-form__form-checkbox-label\">\n\t\t\t\t\t<input type=\"checkbox\" id=\"check\" class=\"reg-form__form-checkbox-input\">\n\t\t\t\t\t<span></span>\n\t\t\t\t\tСогласен с обработкой персональных данных\n\t\t\t\t</label>\n\t\t\t</div>\n\t\t\t<button type=\"submit\" class=\"reg-form__form-submit\">\n\t\t\t\tВход →\n\t\t\t</button>\n\t\t\t<div class=\"reg-form__auth\">\n\t\t\t\tУ вас есть аккаунт? <a href=\"#\" class=\"reg-form__auth-link\">Войдите под своими данными</a>\n\t\t\t\t<span></span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"reg-form__bottom\">\n\t\t\t<a href=\"#\">Политика конфиденциальности</a>\n\t\t\t<a href=\"#\">Правила использования</a>\n\t\t</div>\n\t</form>\n</section>"}],
+    template = twig({"id":"$resolved:3cb40fc6eecc60a0a48f5dbfed58207b2d5e3b44bb0848250ecda41d1db1b7fe4737a7f98e275d56fa737e67b03446bedbf7a7e2b7da48e6eb52c8e22cf23646:reg-form.twig","data":[{"type":"raw","value":"<section class=\"reg-form\">\n\t<div class=\"reg-form__logo\">\n\t\t<img src=\"../img/logo.svg\" alt=\"\">\n\t</div>\n\t<div class=\"reg-form__main\">\n\t\t<div class=\"reg-form__title\">\n\t\t\tРегистрация\n\t\t</div>\n\t\t<div class=\"reg-form__descr\">\n\t\t\tПожалуйста введите ваши данные для входа\n\t\t</div>\n\t\t<form action=\"\" class=\"reg-form__form\" onsubmit=\"abo.test()\">\n\t\t\t<div class=\"reg-form__wr\">\n\t\t\t\t<label for=\"\" class=\"reg-form__form-label\">\n\t\t\t\t\tEmail Address\n\t\t\t\t\t<input type=\"email\" class=\"reg-form__form-input\">\n\t\t\t\t\t<span></span>\n\t\t\t\t</label>\n\t\t\t\t<label for=\"\" class=\"reg-form__form-label\">\n\t\t\t\t\tPassword\n\t\t\t\t\t<input type=\"password\" placeholder=\"*******************\" class=\"reg-form__form-input\">\n\t\t\t\t\t<span></span>\n\t\t\t\t</label>\n\t\t\t\t<label for=\"\" class=\"reg-form__form-label\">\n\t\t\t\t\tConfirm password\n\t\t\t\t\t<input type=\"password\" placeholder=\"*******************\" class=\"reg-form__form-input\">\n\t\t\t\t\t<span></span>\n\t\t\t\t</label>\n\t\t\t</div>\n\t\t\t<div class=\"reg-form__form-checkbox\">\n\t\t\t\t<label for=\"check\"class=\"reg-form__form-checkbox-label\">\n\t\t\t\t\t<input type=\"checkbox\" id=\"check\" class=\"reg-form__form-checkbox-input\">\n\t\t\t\t\t<span></span>\n\t\t\t\t\tСогласен с обработкой персональных данных\n\t\t\t\t</label>\n\t\t\t</div>\n\t\t\t<button type=\"submit\" class=\"reg-form__form-submit\">\n\t\t\t\tВход →\n\t\t\t</button>\n\t\t\t<div class=\"reg-form__auth\">\n\t\t\t\tУ вас есть аккаунт? <a href=\"#\" class=\"reg-form__auth-link\">Войдите под своими данными</a>\n\t\t\t\t<span></span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"reg-form__bottom\">\n\t\t\t<a href=\"#\">Политика конфиденциальности</a>\n\t\t\t<a href=\"#\">Правила использования</a>\n\t\t</div>\n\t</form>\n</section>"}],"allowInlineIncludes":true,"rethrow":true});
 
 module.exports = function(context) { return template.render(context); }
 
@@ -10186,13 +10209,15 @@ module.exports.tokens = tokens;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(/*! ../blocks/menu.twig */ "./src/template/blocks/menu.twig");
+
 __webpack_require__(/*! ../blocks/reg-form.twig */ "./src/template/blocks/reg-form.twig");
 
 __webpack_require__(/*! ../layouts/layout.twig */ "./src/template/layouts/layout.twig");
 
 var twig = __webpack_require__(/*! twig */ "./node_modules/twig/twig.js").twig,
-    tokens = [{"type":"logic","token":{"type":"Twig.logic.type.extends","stack":[{"type":"Twig.expression.type.string","value":"$resolved:0152f66c9e7cd9face943e34d5b55d868291eccd74f548fcbeef7e1626b0242d44ef7e5bb3a36e075e42386b6b9320be2ec1f6d6254d060cab6a1adc80cb42b1:layout.twig"}]}},{"type":"raw","value":"\n"},{"type":"logic","token":{"type":"Twig.logic.type.block","blockName":"main","output":[{"type":"raw","value":"\t<div class=\"main__left\">\n\t\t"},{"type":"logic","token":{"type":"Twig.logic.type.include","only":false,"ignoreMissing":false,"stack":[{"type":"Twig.expression.type.string","value":"$resolved:3cb40fc6eecc60a0a48f5dbfed58207b2d5e3b44bb0848250ecda41d1db1b7fe4737a7f98e275d56fa737e67b03446bedbf7a7e2b7da48e6eb52c8e22cf23646:reg-form.twig"}]}},{"type":"raw","value":"\t</div>\n\t<div class=\"main__right\">\n\t\t\n\t</div>\n"}]}}],
-    template = twig({"id":"$resolved:c6cf119ee5e7d53f574196343b197739f53629de4f06cc6f5a1581f858d5ca2895f784e5d0f4192088c79ffc2673c87846742cf28679d1d19060576313e36a5e:index.twig","data":[{"type":"logic","token":{"type":"Twig.logic.type.extends","stack":[{"type":"Twig.expression.type.string","value":"$resolved:0152f66c9e7cd9face943e34d5b55d868291eccd74f548fcbeef7e1626b0242d44ef7e5bb3a36e075e42386b6b9320be2ec1f6d6254d060cab6a1adc80cb42b1:layout.twig"}]}},{"type":"raw","value":"\n"},{"type":"logic","token":{"type":"Twig.logic.type.block","blockName":"main","output":[{"type":"raw","value":"\t<div class=\"main__left\">\n\t\t"},{"type":"logic","token":{"type":"Twig.logic.type.include","only":false,"ignoreMissing":false,"stack":[{"type":"Twig.expression.type.string","value":"$resolved:3cb40fc6eecc60a0a48f5dbfed58207b2d5e3b44bb0848250ecda41d1db1b7fe4737a7f98e275d56fa737e67b03446bedbf7a7e2b7da48e6eb52c8e22cf23646:reg-form.twig"}]}},{"type":"raw","value":"\t</div>\n\t<div class=\"main__right\">\n\t\t\n\t</div>\n"}]}}],"allowInlineIncludes":true,"rethrow":true});
+    tokens = [{"type":"logic","token":{"type":"Twig.logic.type.extends","stack":[{"type":"Twig.expression.type.string","value":"$resolved:0152f66c9e7cd9face943e34d5b55d868291eccd74f548fcbeef7e1626b0242d44ef7e5bb3a36e075e42386b6b9320be2ec1f6d6254d060cab6a1adc80cb42b1:layout.twig"}]}},{"type":"raw","value":"\n"},{"type":"logic","token":{"type":"Twig.logic.type.block","blockName":"main","output":[{"type":"raw","value":"\t<div class=\"main\">\n\t\t<div class=\"main__left\">\n\t\t\t"},{"type":"logic","token":{"type":"Twig.logic.type.include","only":false,"ignoreMissing":false,"stack":[{"type":"Twig.expression.type.string","value":"$resolved:3cb40fc6eecc60a0a48f5dbfed58207b2d5e3b44bb0848250ecda41d1db1b7fe4737a7f98e275d56fa737e67b03446bedbf7a7e2b7da48e6eb52c8e22cf23646:reg-form.twig"}]}},{"type":"raw","value":"\t\t</div>\n\t\t<div class=\"main__right\">\n\t\t\t"},{"type":"logic","token":{"type":"Twig.logic.type.include","only":false,"ignoreMissing":false,"stack":[{"type":"Twig.expression.type.string","value":"$resolved:db99fe476fbb20fe7b1e092c61f4332780b8455c93709d4e6a279f1f7715d2462be5f7fba400d8b9bc2846e2677f7bbd82431a278e91ae748b6531eb26b317f4:menu.twig"}]}},{"type":"raw","value":"\t\t</div>\n\t</div>\n"}]}}],
+    template = twig({"id":"$resolved:c6cf119ee5e7d53f574196343b197739f53629de4f06cc6f5a1581f858d5ca2895f784e5d0f4192088c79ffc2673c87846742cf28679d1d19060576313e36a5e:index.twig","data":[{"type":"logic","token":{"type":"Twig.logic.type.extends","stack":[{"type":"Twig.expression.type.string","value":"$resolved:0152f66c9e7cd9face943e34d5b55d868291eccd74f548fcbeef7e1626b0242d44ef7e5bb3a36e075e42386b6b9320be2ec1f6d6254d060cab6a1adc80cb42b1:layout.twig"}]}},{"type":"raw","value":"\n"},{"type":"logic","token":{"type":"Twig.logic.type.block","blockName":"main","output":[{"type":"raw","value":"\t<div class=\"main\">\n\t\t<div class=\"main__left\">\n\t\t\t"},{"type":"logic","token":{"type":"Twig.logic.type.include","only":false,"ignoreMissing":false,"stack":[{"type":"Twig.expression.type.string","value":"$resolved:3cb40fc6eecc60a0a48f5dbfed58207b2d5e3b44bb0848250ecda41d1db1b7fe4737a7f98e275d56fa737e67b03446bedbf7a7e2b7da48e6eb52c8e22cf23646:reg-form.twig"}]}},{"type":"raw","value":"\t\t</div>\n\t\t<div class=\"main__right\">\n\t\t\t"},{"type":"logic","token":{"type":"Twig.logic.type.include","only":false,"ignoreMissing":false,"stack":[{"type":"Twig.expression.type.string","value":"$resolved:db99fe476fbb20fe7b1e092c61f4332780b8455c93709d4e6a279f1f7715d2462be5f7fba400d8b9bc2846e2677f7bbd82431a278e91ae748b6531eb26b317f4:menu.twig"}]}},{"type":"raw","value":"\t\t</div>\n\t</div>\n"}]}}],"allowInlineIncludes":true,"rethrow":true});
 
 module.exports = function(context) { return template.render(context); }
 
