@@ -1,0 +1,13 @@
+@import 'header';
+@import 'footer';
+@import 'main';
+
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	min-width: 425px;
+	background-color: rgba(0, 0, 0, 0.9);
+}
