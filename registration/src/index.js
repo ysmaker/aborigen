@@ -3,4 +3,3 @@ import html from "./template/pages/index.twig";
 import style from "./styles/main.scss";
 // Import scripts
 import script from "./scripts/main.js";
-// console.log('complete');
