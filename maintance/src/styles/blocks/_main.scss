@@ -30,10 +30,14 @@
 	margin-bottom: 24px;
 	a
 	{
+		text-decoration: none;
+		border-bottom: 1px solid #FFAE00;
+		transition: 0.3s;
 		color: #FFAE00;
 		&:hover
 		{
-			text-decoration: none;
+			border-bottom: 1px solid transparent;
+			transition: 0.33s;
 		}
 	}
 }
@@ -62,10 +66,15 @@
 }
 .main__socials-item
 {
+	path
+	{
+		transition: 0.3s;
+	}
 	&:hover
 	{
 		path
 		{
+			transition: 0.3s;
 			fill: #FFAE00;
 		}
 	}
