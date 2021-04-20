@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../fonts/poppins/Poppins-Regular.eot');
+    src: local('Poppins Regular'), local('Poppins-Regular'),
+        url('../fonts/poppins/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/poppins/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/poppins/Poppins-Regular.woff') format('woff'),
+        url('../fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins SemiBold';
+    src: url('../fonts/poppins/Poppins-SemiBold.eot');
+    src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
+        url('../fonts/poppins/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/poppins/Poppins-SemiBold.woff2') format('woff2'),
+        url('../fonts/poppins/Poppins-SemiBold.woff') format('woff'),
+        url('../fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('../fonts/poppins/Poppins-Bold.eot');
+    src: local('Poppins Bold'), local('Poppins-Bold'),
+        url('../fonts/poppins/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/poppins/Poppins-Bold.woff2') format('woff2'),
+        url('../fonts/poppins/Poppins-Bold.woff') format('woff'),
+        url('../fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
