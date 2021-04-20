@@ -16,79 +16,122 @@
 	<meta property="og:locale" content="ru_RU">
 <link href="main.css" rel="stylesheet"></head>
 <body>
-			<div class="main">
-		<div class="main__left">
-			<section class="reg-form">
-	<div class="reg-form__logo">
-		<img src="../img/logo.svg" alt="">
+	<header class="header">
+	<div class="header__main">
+		<div class="header__menu">
+			<div class="header__menu-left">
+				<button class="header__burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<a href="#" class="header__logo">
+					<img src="../../img/logo.svg" alt="">
+				</a>
+			</div>
+			<div class="header__menu-center">
+				<a href="#" class="header__menu-item">
+					Поиск туров
+				</a>
+				<a href="#" class="header__menu-item">
+					🔥 Горящие туры
+				</a>
+				<a href="#" class="header__menu-item">
+					Туры по странам
+				</a>
+				<a href="#" class="header__menu-item">
+					Турагенствам
+				</a>
+			</div>
+			<div class="header__menu-right">
+				<a href="tel:88001003024" class="header__phone">
+					<img src="../../img/phone.svg" alt="">
+					<span>
+						8 800 100 30 24
+					</span>
+				</a>
+				<button class="header__sign-in">
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6666 8.00008L7.33329 5.33341L7.33329 7.33341L2.66663 7.33341L2.66663 8.66675L7.33329 8.66675L7.33329 10.6667L10.6666 8.00008Z" fill="white"/><path d="M12 2.66675L12 13.3334L7.33337 13.3334L7.33337 14.6667L12 14.6667C12.7354 14.6667 13.3334 14.0687 13.3334 13.3334L13.3334 2.66675C13.3334 1.93141 12.7354 1.33341 12 1.33341L7.33337 1.33341L7.33337 2.66675L12 2.66675Z" fill="white"/></svg>
+					<span>Вход</span>
+				</button>
+				<a href="#" class="header__region">
+					Москва
+				</a>
+			</div>
+		</div>
+		<div class="header__title">
+			<h1 class="title">
+				Поиск туров онлайн <br>по всем туроператорам
+			</h1>
+		</div>
+		<div class="header__filter">
+			<form action="" class="filter">
+				<div class="filter__item">
+					<label for="" class="filter__item-descr">
+						Куда вы хотите полететь?
+						<div class="filter__item-country">
+							<div class="select select--country">
+								<div class="select__header">
+									<div class="select__current">
+										🇮🇳 Индия
+									</div>
+									<svg class="select__icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.73455 7.20482C6.33863 7.63342 5.66137 7.63342 5.26545 7.20482L0.622375 2.17855C0.0307251 1.53807 0.484997 0.499999 1.35693 0.499999L10.6431 0.5C11.515 0.5 11.9693 1.53807 11.3776 2.17855L6.73455 7.20482Z" fill="#303030"/></svg>
+								</div>
+								<div class="select__body">
+									<div class="select__item">
+										🇮🇳 Индия
+									</div>
+									<div class="select__item">
+										🇲🇻 Мальдивы
+									</div>
+									<div class="select__item">
+										🇪🇸 Испания
+									</div>
+									<div class="select__item">
+										🇦🇿 Азербайджан
+									</div>
+									<div class="select__item">
+										🇪🇬 Египет
+									</div>
+									<div class="select__item">
+										🇲🇰 Северная Македония
+									</div>
+								</div>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div class="filter__item filter__item--from">
+					<label for="" class="filter__item-descr">
+						Отправление
+						<input type="text" class="filter__item-input">
+					</label>
+				</div>
+				<div class="filter__item">
+					<label for="" class="filter__item-descr">
+						Даты вылета
+						<input type="text" class="filter__item-input">
+					</label>
+				</div>
+				<div class="filter__item">
+					<label for="" class="filter__item-descr">
+						Количество ночей
+						<input type="text" class="filter__item-input">
+					</label>
+				</div>
+				<div class="filter__item">
+					<label for="" class="filter__item-descr">
+						Туристов
+						<input type="text" class="filter__item-input">
+					</label>
+				</div>
+				<div class="filter__item">
+					<input type="submit" class="filter__item-input">
+				</div>
+			</form>
+		</div>
 	</div>
-	<div class="reg-form__main">
-		<div class="reg-form__title">
-			Регистрация
-		</div>
-		<div class="reg-form__descr">
-			Пожалуйста введите ваши данные для входа
-		</div>
-		<form action="" class="reg-form__form">
-			<div class="reg-form__wr">
-				<label for="" class="reg-form__form-label">
-					Email Address
-					<input type="email" class="reg-form__form-input">
-					<span></span>
-				</label>
-				<label for="" class="reg-form__form-label">
-					Password
-					<input type="password" placeholder="*******************" class="reg-form__form-input">
-					<span></span>
-				</label>
-				<label for="" class="reg-form__form-label">
-					Confirm password
-					<input type="password" placeholder="*******************" class="reg-form__form-input">
-					<span></span>
-				</label>
-			</div>
-			<div class="reg-form__form-checkbox">
-				<label for="check"class="reg-form__form-checkbox-label">
-					<input type="checkbox" id="check" class="reg-form__form-checkbox-input">
-					<span></span>
-					Согласен с обработкой персональных данных
-				</label>
-			</div>
-			<button type="submit" class="reg-form__form-submit">
-				Вход →
-			</button>
-			<div class="reg-form__auth">
-				У вас есть аккаунт? <a href="#" class="reg-form__auth-link">Войдите под своими данными</a>
-				<span></span>
-			</div>
-		</div>
-		<div class="reg-form__bottom">
-			<a href="#">Политика конфиденциальности</a>
-			<a href="#">Правила использования</a>
-		</div>
-	</form>
-</section>		</div>
-		<div class="main__right">
-			<section class="menu">
-	<ul class="menu__nav">
-		<li class="menu__nav-item">
-			Главная
-		</li>
-		<li class="menu__nav-item">
-			О нас
-		</li>
-		<li class="menu__nav-item">
-			Блог
-		</li>
-		<li class="menu__nav-item">
-			Тарифы
-		</li>
-		<li class="menu__nav-item">
-			Контакты
-		</li>
-	</ul>
-	<img src="../img/main.png" class="menu__img" alt="">
-</section>		</div>
-	</div>
-</bod>
+</header>			<footer class="footer">
+	footer
+</footer></bod>
 </html><script type="text/javascript" src="main.js"></script>
