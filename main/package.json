@@ -11,6 +11,7 @@
   "author": "G",
   "license": "ISC",
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "imagemin-pngquant": "^5.0.1",
     "twig-loader": "^0.5.5"
   },
