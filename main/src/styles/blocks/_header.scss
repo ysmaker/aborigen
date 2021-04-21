@@ -24,6 +24,7 @@
 	padding-top: 29px;
 	padding-left: 160px;
 	padding-right: 160px;
+	padding-bottom: 96px;
 }
 .header__menu
 {
@@ -91,10 +92,15 @@
 {
 	color: #FFFFFF;
 	text-decoration: none;
-
+	transition: 0.3s;
 	&:not(:last-child)
 	{
 		margin-right: 24px;
+	}
+	&:hover
+	{
+		color: #FFAE00;
+		transition: 0.3s;
 	}
 }
 .header__phone
@@ -102,9 +108,27 @@
 	color: #FFFFFF;
 	text-decoration: none;
 	margin-right: 25px;
-	img
+	transition: 0.3s;
+	svg
 	{
 		margin-right: 5px;
+		path
+		{
+			transition: 0.3s;
+		}
+	}
+	&:hover
+	{
+		color: #FFAE00;
+		transition: 0.3s;
+		svg
+		{
+			path
+			{
+				fill: #FFAE00;
+				transition: 0.3s;
+			}
+		}
 	}
 }
 .header__sign-in
@@ -113,16 +137,40 @@
 	outline: none;
 	color: #FFFFFF;
 	margin-right: 25px;
+	transition: 0.3s;
 	svg
 	{
 		vertical-align: bottom;
 		margin-right: 2px;
+		path
+		{
+			transition: 0.3s;
+		}
+	}
+	&:hover
+	{
+		color: #FFAE00;
+		transition: 0.3s;
+		svg
+		{
+			path
+			{
+				fill: #FFAE00;
+				transition: 0.3s;
+			}
+		}
 	}
 }
 .header__region
 {
 	color: #FFFFFF;
 	text-decoration: none;
+	transition: 0.3s;
+	&:hover
+	{
+		color: #FFAE00;
+		transition: 0.3s;
+	}
 }
 .header__title
 {
@@ -137,6 +185,7 @@
 }
 .filter__item
 {
+	position: relative;
 	max-width: 263px;
 	font-family: $regular;
 	font-size: 14px;
@@ -145,6 +194,10 @@
 	&:first-child
 	{
 		.filter__item-input
+		{
+			border-radius: 8px 0 0 8px;
+		}
+		.select__header
 		{
 			border-radius: 8px 0 0 8px;
 		}
@@ -167,9 +220,24 @@
 	{
 		width: 215px;
 	}
+	&--date
+	{
+		width: 263px;
+	}
+	&--submit
+	{
+		width: 123px;
+	}
+}
+.filter__item-icon
+{
+	position: absolute;
+	right: 15px;
+	top: 45px;
 }
 .filter__item-input
 {
+	width: 100%;
 	height: 60px;
 	box-sizing: border-box;
 	font-size: 18px;
@@ -184,6 +252,35 @@
 .filter__item-country
 {
 	margin-top: 9px;
+}
+.filter__item-nights
+{
+	margin-top: 9px;
+}
+.filter__item-tourists
+{
+	margin-top: 9px;
+}
+.filter__item-submit
+{
+	width: 100%;
+	height: 60px;
+	box-sizing: border-box;
+	font-size: 18px;
+	line-height: 16px;
+	color: #fff;
+	padding: 22px 12px;
+	background-color: #FFAE00;
+	border-radius: 0 8px 8px 0;
+	border: none;
+	outline: none;
+	margin-top: 9px;
+	transition: 0.3s;
+	&:hover
+	{
+		background-color: #FF9900;
+		transition: 0.3s;
+	}
 }
 
 .select
@@ -200,12 +297,24 @@
 		{
 			opacity: 1;
 			visibility: visible;
-			transition: all 0.3s;
+			transition: 0.3s;
 		}
 	}
 	&--country
 	{
 		width: 211px;
+	}
+	&--nights
+	{
+		width: 170px;
+		font-family: $regular;
+		font-weight: 400;
+	}
+	&--tourists
+	{
+		width: 139px;
+		font-family: $regular;
+		font-weight: 400;
 	}
 }
 .select__header
@@ -220,7 +329,6 @@
 	padding: 22px 12px;
 	background-color: #fff;
 	border-right: 1px solid rgba(207, 218, 230, 0.5);
-	border-radius: 8px 0 0 8px;
 	cursor: pointer;
 }
 .select__body
@@ -230,9 +338,13 @@
 	box-shadow: 0px 0px 20px rgba(48, 48, 48, 0.15);
 	top: calc(100% + 7px);
 	color: #000;
-	transition: all 0.3s;
+	transition: 0.3s;
 	opacity: 0;
 	visibility: hidden;
+	&--close
+	{
+		display: none;
+	}
 }
 .select__icon
 {
@@ -270,6 +382,10 @@
 
 @media (max-width: 1360px)
 {
+	.header
+	{
+		background-size: cover;
+	}
 	.header__main
 	{
 		padding-left: 80px;
@@ -298,6 +414,7 @@
 	{
 		padding-left: 45px;
 		padding-right: 45px;
+		padding-bottom: 177px;
 	}
 	.header__menu
 	{
@@ -306,6 +423,71 @@
 	.header__menu-center
 	{
 		display: none;
+	}
+	.filter
+	{
+		max-width: 568px;
+		flex-wrap: wrap;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.filter__descr
+	{
+		display: none;
+	}
+	.filter__item
+	{
+		max-width: 1000px;
+		&:first-child
+		{
+			.select__header
+			{
+				border-radius: 8px 0 0 0;
+			}
+		}
+		&--from
+		{
+			width: 284px;
+			.filter__item-input
+			{
+				border-radius: 0 8px 0 0;
+			}
+		}
+		&--date
+		{
+			width: 261px;
+		}
+		&--submit
+		{
+			width: 100%;
+			.filter__item-submit
+			{
+				border-radius: 0 0 8px 8px;
+			}
+		}
+	}
+	.filter__item-icon
+	{
+		top: 30px;
+	}
+	.select
+	{
+		&--country
+		{
+			width: 284px;
+		}
+		&--nights
+		{
+			width: 164px;
+		}
+		&--tourists
+		{
+			width: 143px;
+			.select__body
+			{
+				right: 0;
+			}
+		}
 	}
 }
 
@@ -327,7 +509,7 @@
 	}
 	.header__main
 	{
-		padding-left: 15px;
+		padding-left: 12px;
 		padding-right: 12px;
 	}
 	.header__burger
@@ -345,5 +527,82 @@
 	.header__region
 	{
 		display: none;
+	}
+	.filter
+	{
+		padding-left: 33px;
+		padding-right: 33px;
+	}
+	.filter__item
+	{
+		&--country
+		{
+			width: 100%;
+		}
+		&:first-child
+		{
+			.select__header
+			{
+				border-radius: 8px 8px 0 0;
+			}
+		}
+		&:not(:last-child)
+		{
+			.filter__item-input
+			{
+				border-right: none;
+			}
+		}
+		&--from
+		{
+			width: 100%;
+			.filter__item-input
+			{
+				border-radius: 0;
+			}
+		}
+		&--date
+		{
+			width: 100%;
+		}
+		&--submit
+		{
+			width: 100%;
+			.filter__item-submit
+			{
+				border-radius: 0 0 8px 8px;
+			}
+		}
+		&--nights
+		{
+			width: 50%;
+			.select__header
+			{
+				border-right: 1px solid rgba(207, 218, 230, 0.5);
+			}
+		}
+		&--tourists
+		{
+			width: 50%;
+		}
+	}
+	.select
+	{
+		&--country
+		{
+			width: 100%;
+		}
+		&--nights
+		{
+			width: 100%;
+		}
+		&--tourists
+		{
+			width: 100%;
+		}
+	}
+	.select__header
+	{
+		border-right: none;
 	}
 }
