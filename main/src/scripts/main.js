@@ -20,6 +20,8 @@ var Abo =
 	{
 		$('.select__header').on('click', function()
 		{
+			$('.select--active').find('.select__icon').toggleClass('select__icon--rotate');
+			$('.select--active').removeClass('select--active');
 			$(this).siblings('.select__body').removeClass('select__body--close');
 			$(this).parents('.select').toggleClass('select--active');
 			$(this).find('.select__icon').toggleClass('select__icon--rotate');
@@ -32,10 +34,10 @@ var Abo =
 		});
 		$(document).on('click', function(e)
 		{
-			if ((!( $('.select').is(e.target))) && ($('.select').has(e.target).length === 0))
+			if ((!( $('.select--active').is(e.target))) && ($('.select--active').has(e.target).length === 0))
 			{
 				$('.select--active').find('.select__icon').toggleClass('select__icon--rotate');
-				$('.select').removeClass('select--active');
+				$('.select--active').removeClass('select--active');
 			}
 		});
 	},

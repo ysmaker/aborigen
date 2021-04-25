@@ -626,3 +626,19 @@
   .datepicker--cell-day.-other-month-:empty, .datepicker--cell-year.-other-decade-:empty {
     background: none;
     border: none; }
+
+@media (max-width: 768px)
+{
+  .datepicker
+  {
+    width: 300px;
+  }
+  .datepicker--nav
+  {
+    padding: 24px 24px;
+  }
+  .datepicker--content
+  {
+    padding: 24px 24px;
+  }
+}
