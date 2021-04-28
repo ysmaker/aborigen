@@ -30,6 +30,7 @@
 	color: #303030;
 	text-decoration: none;
 	margin-bottom: 15px;
+	border: 1px solid transparent;
 	svg
 	{
 		vertical-align: middle;
@@ -37,7 +38,6 @@
 	&:hover
 	{
 		border-bottom: 1px solid #303030;
-		margin-bottom: 14px;
 	}
 }
 .footer__social
@@ -46,6 +46,18 @@
 	a
 	{
 		text-decoration: none;
+		&:hover
+		{
+			svg
+			{
+				transform: scale(1.2);
+				transition: 0.3s;
+			}
+		}
+		svg
+		{
+				transition: 0.3s;
+		}
 	}
 }
 .footer__mail
@@ -56,6 +68,7 @@
 	line-height: 24px;
 	color: #303030;
 	text-decoration: none;
+	border: 1px solid transparent;
 	svg
 	{
 		vertical-align: middle;
@@ -209,6 +222,7 @@
 	{
 		flex-direction: column;
 		align-items: flex-start;
+		margin-bottom: 35px;
 	}
 	.footer__logo
 	{
