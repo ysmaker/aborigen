@@ -14,14 +14,19 @@ var Abo =
 	{
 		this.selectChoose();
 		this.datapickerOptions();
+		this.faqSwitch();
+		this.slider();
 	},
 
 	selectChoose: function()
 	{
 		$('.select__header').on('click', function()
 		{
-			$('.select--active').find('.select__icon').toggleClass('select__icon--rotate');
-			$('.select--active').removeClass('select--active');
+			if (!($(this).parents('.select').hasClass('select--active')))
+			{
+				$('.select--active').find('.select__icon').toggleClass('select__icon--rotate');
+				$('.select--active').removeClass('select--active');
+			}
 			$(this).siblings('.select__body').removeClass('select__body--close');
 			$(this).parents('.select').toggleClass('select--active');
 			$(this).find('.select__icon').toggleClass('select__icon--rotate');
@@ -47,7 +52,7 @@ var Abo =
 		$('.filter__item-input--date').datepicker({
 			// minDate: new Date(),
 			// clearButton: true,
-			// autoClose: true,
+			autoClose: true,
 			offset: 7,
 			navTitles: {
 				days: 'MM'
@@ -55,4 +60,16 @@ var Abo =
 		});
 
 	},
+	faqSwitch: function()
+	{
+		$('.faq__wrap-item').on('click', function()
+		{
+			$(this).toggleClass('faq__wrap-item--active');
+		});
+	},
+	slider: function()
+	{
+		$('.popular__slider').slick();
+		console.log('1');
+	}
 };
