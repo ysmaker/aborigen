@@ -3,6 +3,8 @@
 /**
  * инициализация всех инициализаций
  */
+
+
 $(document).ready(function()
 {
 	Abo.init();
@@ -16,6 +18,7 @@ var Abo =
 		this.datapickerOptions();
 		this.faqSwitch();
 		this.slider();
+		this.initMasks();
 	},
 
 	selectChoose: function()
@@ -69,7 +72,15 @@ var Abo =
 	},
 	slider: function()
 	{
-		$('.popular__slider').slick();
-		console.log('1');
-	}
+		const $ = require('jquery');
+		$('.popular__slider').slick({
+			infinite: true,
+			slidesToShow: 3,
+			slidesToScroll: 3
+		});
+	},
+	initMasks: function()
+	{
+		$('.subscribe__input').inputmask({"mask": "+7 999 999 99 99", showMaskOnHover: false, "placeholder": "·"});
+	},
 };
