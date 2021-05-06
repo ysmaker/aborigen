@@ -8,10 +8,13 @@
 	margin-right: auto;
 	padding-top: 42px;
 	padding-bottom: 59px;
+	overflow: hidden;
 }
 h2.popular__title
 {
 	max-width: 804px;
+	padding-left: 160px;
+	padding-right: 160px;
 	margin: 0 auto;
 	margin-bottom: 25px;
 	font-family: $bold;
@@ -23,6 +26,8 @@ h2.popular__title
 .popular__descr
 {
 	max-width: 804px;
+	padding-left: 160px;
+	padding-right: 160px;
 	margin: 0 auto;
 	font-family: $regular;
 	font-size: 16px;
@@ -52,33 +57,89 @@ h2.popular__title
 		transition: 0.3s;
 	}
 }
+.popular__wrap
+{
+	position: relative;
+}
+.popular__progress
+{
+	position: absolute;
+	top: -3px;
+	left: 304px;
+	display: block;
+	width: 285px;
+	height: 6px;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: #D2D2D2;
+}
+.popular__progress-fill
+{
+	display: block;
+	width: 0;
+	height: 100%;
+	background-image: linear-gradient(to right, #258EFA, #258EFA);
+	transition: 0.3s;
+	border-radius: 6px;
+}
 .popular__slider
 {
 	width: 100%;
-	padding-left: 163px;
+	padding-left: 83px;
+	.slick-arrow
+	{
+		top: 0;
+		width: auto;
+		height: auto;
+		z-index: 1;
+	}
 	.slick-prev
 	{
-		left: 20px;
+		left: 163px;
 	}
 	.slick-next
 	{
-		right: 20px;
+		left: 234px;
+	}
+	.slick-list
+	{
+		padding: 20px;
+		padding-left: 60px;
+		padding-top: 36px;
+	}
+	.slick-slide
+	{
+		margin-right: 12px;
+	}
+	.slick-disabled
+	{
+		path
+		{
+			fill: #CCCCCC;
+		}
 	}
 }
 .popular__item-wrap
 {
-	max-width: 230px;
-	background-color: red;
+
+	width: 230px;
 	border-radius: 8px;
+	box-shadow: 0 0 20px 5px rgba(48, 48, 48, 0.15);
 }
 .popular__item-top
 {
 	position: relative;
+	width: 230px;
 	height: 140px;
 	padding: 11px 12px;
 	box-sizing: border-box;
+	&:hover
+	{
+		cursor: pointer;
+	}
 	img
 	{
+		width: 100%;
 		border-radius: 8px 8px 0 0;
 		position: absolute;
 		top: 0;
@@ -130,4 +191,105 @@ h2.popular__title
 {
 	display: flex;
 	justify-content: space-between;
+	padding: 6px 14px;
+	font-family: $regular;
+	font-size: 12px;
+	line-height: 14px;
+	color: #303030;
+	&:nth-child(2n-1)
+	{
+		background-color: #FAFAFA;
+	}
+	&:nth-child(2n)
+	{
+		background-color: #FFFFFF;
+	}
+	&:last-child
+	{
+		border-radius: 0 0 8px 8px;
+	}
+	&:hover
+	{
+		background-color: #0090FF;
+		color: #FFFFFF;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+}
+
+@media (max-width: 1360px)
+{
+	.popular__slider
+	{
+		padding-left: 40px;
+		.slick-list
+		{
+			padding-left: 40px;
+			padding-top: 38px;
+			overflow: visible;
+		}
+		.slick-prev
+		{
+			left: 80px;
+		}
+		.slick-next
+		{
+			left: 150px;
+		}
+	}
+	.popular__progress
+	{
+		left: 220px;
+	}
+}
+
+
+@media (max-width: 1140px)
+{
+	h2.popular__title
+	{
+		max-width: 540px;
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+	.popular__descr
+	{
+		max-width: 690px;
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+}
+
+@media (max-width: 768px)
+{
+	.popular__slider
+	{
+		padding-left: 28px;
+		.slick-list
+		{
+			padding-top: 51px;
+			padding-left: 0;
+		}
+		.slick-prev
+		{
+			left: 28px;
+		}
+		.slick-next
+		{
+			left: 81px;
+		}
+	}
+	.popular__progress
+	{
+		left: 141px;
+		width: 191px;
+	}
+	h2.popular__title
+	{
+		font-size: 24px;
+		line-height: 28px;
+		max-width: 230px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
