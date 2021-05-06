@@ -76,6 +76,10 @@ h2.faq__title
 			}
 		}
 	}
+	&:hover
+	{
+		cursor: pointer;
+	}
 }
 .faq__wrap-question
 {
