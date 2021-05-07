@@ -1,0 +1,99 @@
+.main
+{
+	max-width: 560px;
+	text-align: center;
+}
+.main__logo
+{
+	margin-bottom: 48px;
+}
+.main__title
+{
+	font-family: $bold;
+	font-size: 36px;
+	line-height: 42px;
+	text-align: center;
+	letter-spacing: -0.03em;
+	color: #FFFFFF;
+	margin-top: 0;
+	margin-bottom: 24px;
+}
+.main__contacts
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 28px;
+	color: #FFFFFF;
+	margin-bottom: 24px;
+	a
+	{
+		text-decoration: none;
+		border-bottom: 1px solid #FFAE00;
+		transition: 0.3s;
+		color: #FFAE00;
+		&:hover
+		{
+			border-bottom: 1px solid transparent;
+			transition: 0.33s;
+		}
+	}
+}
+.main__contacts-phone
+{
+	margin-right: 12px;
+}
+.main__socials-title
+{
+	font-family: $regular;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 28px;
+	color: #FFFFFF;
+	margin-bottom: 18px;
+}
+.main__socials-wrap
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 288px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.main__socials-item
+{
+	path
+	{
+		transition: 0.3s;
+	}
+	&:hover
+	{
+		path
+		{
+			transition: 0.3s;
+			fill: #FFAE00;
+		}
+	}
+}
+
+
+@media (max-width: 768px)
+{
+	.main
+	{
+		max-width: 320px;
+	}
+	.main__logo
+	{
+		margin-bottom: 28px;
+	}
+	.main__title
+	{
+		font-size: 30px;
+		line-height: 38px;
+	}
+}

@@ -5,10 +5,10 @@
  */
 $(document).ready(function()
 {
-	Abo.init();
+	abo.init();
 });
 
-var Abo =
+window.abo =
 {
 	init()
 	{
@@ -17,6 +17,18 @@ var Abo =
 
 	test: function()
 	{
-		console.log('hello');
+		console.log($('.menu__nav'));
+	},
+	signUp: function(instance)
+	{
+		event.preventDefault();
+		if ($(this).find('.reg-form__form-input').val() == "")
+			console.log('false');
+		else
+			console.log('true');
+	},
+	logIn: function(instance)
+	{
+		console.log('Авторизация');
 	}
 };

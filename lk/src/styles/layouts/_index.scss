@@ -1,0 +1,22 @@
+body
+{
+	background-color: #E5E5E5;
+}
+.wrapper
+{
+	display: flex;
+}
+.main
+{
+	width: 100%;
+}
+.workspace
+{
+	padding: 35px;
+	display: flex;
+	justify-content: flex-start;
+}
+.workspace__right
+{
+	flex-grow: 1;
+}

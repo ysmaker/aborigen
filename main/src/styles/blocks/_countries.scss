@@ -43,6 +43,11 @@ h2.countries__title
 	width: 100%;
 	padding: 10px 0;
 	overflow: hidden;
+	animation: pulse-black 2s infinite;
+	&:nth-child(even)
+	{
+		animation: pulse-forward 2s infinite;
+	}
 }
 .countries__item
 {

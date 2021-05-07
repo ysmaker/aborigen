@@ -12,11 +12,17 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	max-width: 569px;
+	width: 100%;
 }
 .menu__nav
 {
 	display: flex;
 	justify-content: space-between;
+	max-width: 554px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 	list-style-type: none;
 	padding: 0;
 }
