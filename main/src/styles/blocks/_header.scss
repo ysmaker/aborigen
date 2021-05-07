@@ -41,7 +41,7 @@
 	margin-right: 20px;
 	z-index: 5;
 	margin-left: 15px;
-	transition: background-color 0.5s;
+	transition: background-color 0.3s;
 	span
 	{
 		display: block;
@@ -51,7 +51,7 @@
 		border-radius: 2px;
 		margin-left: auto;
 		margin-right: auto;
-		transition: all 0.5s;
+		transition: all 0.3s;
 		&:not(:last-child)
 		{
 			margin-bottom: 2px;
@@ -60,7 +60,7 @@
 	&--active
 	{
 		background-color: #FFAE00;
-		transition: background-color 0.5s;
+		transition: background-color 0.3s;
 		span:first-child
 		{
 			transform: rotate(45deg) translateY(2px) translateX(2px);
@@ -107,13 +107,13 @@
 	letter-spacing: 0;
 	color: #303030;
 	opacity: 0;
-	transition: 0.5s;
+	transition: 0.3s;
 	visibility: hidden;
 	&--show
 	{
 		opacity: 1;
 		visibility: visible;
-		transition: 0.5s;
+		transition: 0.3s;
 	}
 }
 .header__nav-item
@@ -334,7 +334,7 @@
 		background-color: #FFFFFF;
 		visibility: hidden;
 		opacity: 0;
-		transition: 0.5s;
+		transition: 0.3s;
 	}
 	&--active
 	{
@@ -350,7 +350,7 @@
 			background-color: #FFFFFF;
 			visibility: visible;
 			opacity: 1;
-			transition: 0.5s;
+			transition: 0.3s;
 			z-index: 3;
 		}
 	}
@@ -359,7 +359,7 @@
 {
 	color: #FFFFFF;
 	text-decoration: none;
-	transition: 0.5s;
+	transition: 0.3s;
 	&:not(:last-child)
 	{
 		margin-right: 24px;
@@ -367,7 +367,7 @@
 	&:hover
 	{
 		color: #FFAE00;
-		transition: 0.5s;
+		transition: 0.3s;
 	}
 }
 .header__phone

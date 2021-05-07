@@ -77,12 +77,13 @@ var Abo =
 	},
 	datapickerOptions: function()
 	{
-
+		// $('.filter__item-input--date').value()
 		$('.filter__item-input--date').datepicker({
-			// minDate: new Date(),
-			// clearButton: true,
+			defaultDate: new Date() + 1,
+			minDate: new Date(),
 			autoClose: true,
 			offset: 7,
+			toggleSelected: false,
 			navTitles: {
 				days: 'MM'
 			}
