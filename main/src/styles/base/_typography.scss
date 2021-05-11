@@ -6,10 +6,36 @@ h1.title
 	line-height: 42px;
 	color: #FFFFFF;
 	text-align: center;
-	margin: 0;
+	margin: 0 auto;
 	br
 	{
 		display: none;
+	}
+}
+h2.title
+{
+	font-family: $bold;
+	font-size: 34px;
+	line-height: 42px;
+	text-align: center;
+	margin: 0 auto;
+}
+.g-link
+{
+	display: block;
+	font-family: $semi;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	text-decoration: none;
+	span
+	{
+		&:first-child
+		{
+			border-bottom: 2px solid transparent;
+			transition: 0.3s;
+		}
 	}
 }
 
@@ -24,14 +50,19 @@ h1.title
 	}
 }
 
-
 @media (max-width: 768px)
 {
 	h1.title
 	{
 		font-size: 24px;
 		line-height: 28px;
-		max-width: 230px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	h2.title
+	{
+		font-size: 24px;
+		line-height: 28px;
 		margin-left: auto;
 		margin-right: auto;
 	}

@@ -6,30 +6,30 @@
 	-o-transition: all 0s linear;
 }
 
-@keyframes pulse-black {
-  0% {
-    transform: translateX(-7px);
-  }
+// @keyframes pulse-black {
+//   0% {
+//     transform: translateX(-7px);
+//   }
 
-  70% {
-    transform: translateX(-11px);
-  }
+//   70% {
+//     transform: translateX(-11px);
+//   }
 
-  100% {
-    transform: translateX(-7px);
-  }
-}
+//   100% {
+//     transform: translateX(-7px);
+//   }
+// }
 
-@keyframes pulse-forward {
-  0% {
-    transform: translateX(7px);
-  }
+// @keyframes pulse-forward {
+//   0% {
+//     transform: translateX(7px);
+//   }
 
-  70% {
-    transform: translateX(11px);
-  }
+//   70% {
+//     transform: translateX(11px);
+//   }
 
-  100% {
-    transform: translateX(7px);
-  }
-}
+//   100% {
+//     transform: translateX(7px);
+//   }
+// }
