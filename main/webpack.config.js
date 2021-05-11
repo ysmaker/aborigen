@@ -6,6 +6,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	devtool: "source-map",
+	entry: {
+		index: './src/index.js',
+		country: './src/country.js',
+		// pageThree: './src/pageThree/index.js',
+	},
 	module: {
 		rules: [
 			{
@@ -66,6 +71,10 @@ module.exports = {
 		new HtmlWebPackPlugin({
 			template: "./src/template/pages/index.twig",
 			filename: "./index.html"
+		}),
+		new HtmlWebPackPlugin({
+			template: "./src/template/pages/country.twig",
+			filename: "./country.html"
 		}),
 		new MiniCssExtractPlugin({
 			// Options similar to the same options in webpackOptions.output

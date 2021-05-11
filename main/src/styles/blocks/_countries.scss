@@ -14,12 +14,7 @@ h2.countries__title
 	max-width: 804px;
 	padding-left: 160px;
 	padding-right: 160px;
-	margin: 0 auto;
 	margin-bottom: 25px;
-	font-family: $bold;
-	font-size: 34px;
-	line-height: 42px;
-	text-align: center;
 	color: #3A3A3A;
 }
 .countries__descr
@@ -43,11 +38,11 @@ h2.countries__title
 	width: 100%;
 	padding: 10px 0;
 	overflow: hidden;
-	animation: pulse-black 2s infinite;
-	&:nth-child(even)
-	{
-		animation: pulse-forward 2s infinite;
-	}
+	// animation: pulse-black 2s infinite;
+	// &:nth-child(even)
+	// {
+	// 	animation: pulse-forward 2s infinite;
+	// }
 }
 .countries__item
 {
@@ -66,5 +61,27 @@ h2.countries__title
 	&:not(:last-child)
 	{
 		margin-right: 32px;
+	}
+}
+
+@media (max-width: 768px)
+{
+	.countries__main
+	{
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 72px;
+		padding-bottom: 146px;
+	}
+	h2.countries__title
+	{
+		max-width: 300px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.countries__descr
+	{
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 }
