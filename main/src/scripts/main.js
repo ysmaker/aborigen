@@ -104,9 +104,9 @@ var Abo =
 	slider: function()
 	{
 		const $ = require('jquery');
-		var $slider = $('.popular__slider');
-		var $progressBar = $('.popular__progress');
-		var $progressFill = $('.popular__progress-fill');
+		var $slider = $('.slider');
+		var $progressBar = $('.progress');
+		var $progressFill = $('.progress-fill');
 
 		$slider.on('beforeChange', function(event, slick, currentSlide, nextSlide)
 		{
@@ -119,7 +119,7 @@ var Abo =
 		{
 			$slider.slick({
 				infinite: true,
-				slidesToShow: 5,
+				slidesToShow: 1,
 				slidesToScroll: 1,
 				swipeToSlide: true,
 				variableWidth: true,
@@ -131,6 +131,7 @@ var Abo =
 	initMasks: function()
 	{
 		$('.subscribe__input').inputmask({"mask": "+7 999 999 99 99", showMaskOnHover: false, "placeholder": "·"});
+		$('.filter__item--phone').find('.filter__item-input').inputmask({"mask": "+7 999 999 99 99", showMaskOnHover: false, "placeholder": "·"});
 	},
 };
 
