@@ -1,0 +1,85 @@
+.guide
+{
+	background-color: #FFFFFF;
+	border: 1px solid rgba(207, 218, 230, 0.5);
+}
+.guide__main
+{
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 42px;
+	padding-bottom: 59px;
+	overflow: hidden;
+}
+h2.guide__title
+{
+	max-width: 804px;
+	padding-left: 160px;
+	padding-right: 160px;
+	margin-bottom: 25px;
+	color: #3A3A3A;
+}
+.guide__descr
+{
+	max-width: 804px;
+	padding-left: 160px;
+	padding-right: 160px;
+	margin: 0 auto;
+	font-family: $regular;
+	font-size: 16px;
+	line-height: 20px;
+	color: #303030;
+	text-align: center;
+	margin-bottom: 45px;
+}
+.guide__wrap
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	max-width: 850px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.guide__wrap-item
+{
+	background-color: rgba(255, 255, 255, 0.9);
+	box-shadow: 0px 0px 20px rgba(48, 48, 48, 0.15);
+	border-radius: 8px;
+	padding: 24px 25px;
+	margin: 10px 16px;
+	font-family: $semi;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 20px;
+	color: #000000;
+}
+
+@media (max-width: 1140px)
+{
+	h2.guide__title
+	{
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+	.guide__descr
+	{
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+}
+
+@media (max-width: 768px)
+{
+	h2.guide__title
+	{
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.guide__descr
+	{
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+}

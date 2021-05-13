@@ -1,7 +1,6 @@
 .header
 {
 	position: relative;
-	background-image: url('../img/header-bg-desk.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -314,6 +313,10 @@
 	letter-spacing: 0.5px;
 	text-decoration: none;
 	margin-bottom: 133px;
+	&--inner
+	{
+		margin-bottom: 63px;
+	}
 }
 .header__menu-left
 {
@@ -439,16 +442,38 @@
 		transition: 0.3s;
 	}
 }
-.header__title
+h1.header__title
 {
 	margin-bottom: 40px;
+	&--inner
+	{
+		text-align: left;
+		margin-bottom: 23px;
+	}
 }
-
+.header__descr
+{
+	max-width: 690px;
+	font-family: $regular;
+	font-size: 18px;
+	line-height: 24px;
+	color: #FFFFFF;
+	margin-bottom: 28px;
+}
 .filter
 {
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-end;
+	&--inner
+	{
+		max-width: 1000px;
+		justify-content: space-between;
+		input
+		{
+			border-radius: 8px;
+		}
+	}
 }
 .filter__item
 {
@@ -467,6 +492,10 @@
 		.select__header
 		{
 			border-radius: 8px 0 0 8px;
+			&--inner
+			{
+				border-radius: 8px;
+			}
 		}
 	}
 	&:last-child
@@ -494,6 +523,14 @@
 	&--submit
 	{
 		width: 123px;
+	}
+	&--inner-submit
+	{
+		width: 250px;
+	}
+	&--inner-name
+	{
+		width: 200px;
 	}
 }
 .filter__item-icon
@@ -560,6 +597,16 @@
 	{
 		background-color: #FF9900;
 		transition: 0.3s;
+	}
+	&--inner
+	{
+		background-color: #258EFA;
+		transition: 0.3s;
+		&:hover
+		{
+			background-color: #2577FA;
+			transition: 0.3s;
+		}
 	}
 }
 
@@ -706,12 +753,41 @@
 	{
 		display: none;
 	}
+
 	.filter
 	{
 		max-width: 568px;
 		flex-wrap: wrap;
 		margin-left: auto;
 		margin-right: auto;
+		&--inner
+		{
+			flex-wrap: nowrap;
+			flex-direction: column;
+			align-items: center;
+			.filter__item
+			{
+				width: 350px;
+				&:first-child
+				{
+					.select__header
+					{
+						border-radius: 8px 8px 0 0;
+					}
+				}
+				.filter__item-input
+				{
+					border-radius: 0;
+				}
+			}
+			.select
+			{
+				&--country
+				{
+					width: 350px;
+				}
+			}
+		}
 	}
 	.filter__descr
 	{
@@ -863,6 +939,14 @@
 	.header__region
 	{
 		display: none;
+	}
+	h1.header__title
+	{
+		padding-left: 20px;
+	}
+	.header__descr
+	{
+		padding-left: 20px;
 	}
 	.filter
 	{
