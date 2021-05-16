@@ -1,0 +1,140 @@
+.slider
+{
+	.slick-arrow
+	{
+		top: 0;
+		width: auto;
+		height: auto;
+		z-index: 1;
+	}
+	.slick-list
+	{
+		padding: 20px;
+		padding-left: 60px;
+		padding-top: 36px;
+	}
+	.slick-slide
+	{
+		margin-right: 12px;
+	}
+	.slick-disabled
+	{
+		path
+		{
+			fill: #CCCCCC;
+		}
+	}
+}
+.progress
+{
+	position: absolute;
+	top: -3px;
+	display: block;
+	width: 285px;
+	height: 6px;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: #D2D2D2;
+}
+.progress-fill
+{
+	display: block;
+	width: 0;
+	height: 100%;
+	background-image: linear-gradient(to right, #258EFA, #258EFA);
+	transition: 0.3s;
+	border-radius: 6px;
+}
+
+@media (min-width: 1440px)
+{
+	.slider
+	{
+		padding-left: calc( ( 100vw - 1114px ) / 2 );
+		.slick-prev
+		{
+			left: calc( ( 100vw - 1114px ) / 2 );
+		}
+		.slick-next
+		{
+			left: calc(( ( 100vw - 1114px ) / 2 ) + 71px);
+		}
+	}
+	.progress
+	{
+		left: calc(( ( 100vw - 1114px ) / 2 ) + 141px);
+	}
+}
+
+@media (max-width: 1440px)
+{
+	.slider
+	{
+		width: 100%;
+		padding-left: 163px;
+		.slick-prev
+		{
+			left: 163px;
+		}
+		.slick-next
+		{
+			left: 234px;
+		}
+	}
+	.progress
+	{
+		left: 304px;
+	}
+}
+
+@media (max-width: 1360px)
+{
+	.slider
+	{
+		padding-left: 40px;
+		.slick-list
+		{
+			padding-left: 40px;
+			padding-top: 38px;
+			overflow: visible;
+		}
+		.slick-prev
+		{
+			left: 80px;
+		}
+		.slick-next
+		{
+			left: 150px;
+		}
+	}
+	.progress
+	{
+		left: 220px;
+	}
+}
+
+@media (max-width: 768px)
+{
+	.slider
+	{
+		padding-left: 28px;
+		.slick-list
+		{
+			padding-top: 51px;
+			padding-left: 0;
+		}
+		.slick-prev
+		{
+			left: 28px;
+		}
+		.slick-next
+		{
+			left: 81px;
+		}
+	}
+	.progress
+	{
+		left: 141px;
+		width: 191px;
+	}
+}

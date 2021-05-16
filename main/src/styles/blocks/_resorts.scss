@@ -35,46 +35,6 @@ h2.resorts__title
 .resorts__wrap
 {
 	position: relative;
-	max-width: 1120px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.resorts__slider
-{
-	width: 100%;
-	padding-left: 163px;
-	.slick-arrow
-	{
-		top: 0;
-		width: auto;
-		height: auto;
-		z-index: 1;
-	}
-	.slick-prev
-	{
-		left: 163px;
-	}
-	.slick-next
-	{
-		left: 234px;
-	}
-	.slick-list
-	{
-		padding: 20px;
-		padding-left: 60px;
-		padding-top: 36px;
-	}
-	.slick-slide
-	{
-		margin-right: 12px;
-	}
-	.slick-disabled
-	{
-		path
-		{
-			fill: #CCCCCC;
-		}
-	}
 }
 .resorts__item-top
 {
@@ -216,28 +176,6 @@ h2.resorts__title
 	color: #FFFFFF;
 }
 
-@media (max-width: 1360px)
-{
-	.resorts__slider
-	{
-		padding-left: 40px;
-		.slick-list
-		{
-			padding-left: 40px;
-			padding-top: 38px;
-			overflow: visible;
-		}
-		.slick-prev
-		{
-			left: 80px;
-		}
-		.slick-next
-		{
-			left: 150px;
-		}
-	}
-}
-
 @media (max-width: 1140px)
 {
 	h2.resorts__title
@@ -256,23 +194,6 @@ h2.resorts__title
 
 @media (max-width: 768px)
 {
-	.resorts__slider
-	{
-		padding-left: 28px;
-		.slick-list
-		{
-			padding-top: 51px;
-			padding-left: 0;
-		}
-		.slick-prev
-		{
-			left: 28px;
-		}
-		.slick-next
-		{
-			left: 81px;
-		}
-	}
 	h2.resorts__title
 	{
 		max-width: 290px;

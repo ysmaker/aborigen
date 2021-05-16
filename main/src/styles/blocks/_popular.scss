@@ -51,64 +51,6 @@ h2.popular__title
 {
 	position: relative;
 }
-.progress
-{
-	position: absolute;
-	top: -3px;
-	left: 304px;
-	display: block;
-	width: 285px;
-	height: 6px;
-	border-radius: 10px;
-	overflow: hidden;
-	background-color: #D2D2D2;
-}
-.progress-fill
-{
-	display: block;
-	width: 0;
-	height: 100%;
-	background-image: linear-gradient(to right, #258EFA, #258EFA);
-	transition: 0.3s;
-	border-radius: 6px;
-}
-.popular__slider
-{
-	width: 100%;
-	padding-left: 163px;
-	.slick-arrow
-	{
-		top: 0;
-		width: auto;
-		height: auto;
-		z-index: 1;
-	}
-	.slick-prev
-	{
-		left: 163px;
-	}
-	.slick-next
-	{
-		left: 234px;
-	}
-	.slick-list
-	{
-		padding: 20px;
-		padding-left: 60px;
-		padding-top: 36px;
-	}
-	.slick-slide
-	{
-		margin-right: 12px;
-	}
-	.slick-disabled
-	{
-		path
-		{
-			fill: #CCCCCC;
-		}
-	}
-}
 .popular__item-wrap
 {
 
@@ -207,33 +149,6 @@ h2.popular__title
 	}
 }
 
-@media (max-width: 1360px)
-{
-	.popular__slider
-	{
-		padding-left: 40px;
-		.slick-list
-		{
-			padding-left: 40px;
-			padding-top: 38px;
-			overflow: visible;
-		}
-		.slick-prev
-		{
-			left: 80px;
-		}
-		.slick-next
-		{
-			left: 150px;
-		}
-	}
-	.progress
-	{
-		left: 220px;
-	}
-}
-
-
 @media (max-width: 1140px)
 {
 	h2.popular__title
@@ -252,28 +167,6 @@ h2.popular__title
 
 @media (max-width: 768px)
 {
-	.popular__slider
-	{
-		padding-left: 28px;
-		.slick-list
-		{
-			padding-top: 51px;
-			padding-left: 0;
-		}
-		.slick-prev
-		{
-			left: 28px;
-		}
-		.slick-next
-		{
-			left: 81px;
-		}
-	}
-	.progress
-	{
-		left: 141px;
-		width: 191px;
-	}
 	h2.popular__title
 	{
 		max-width: 230px;
