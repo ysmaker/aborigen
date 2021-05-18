@@ -1,9 +1,9 @@
 .preload *
 {
-	-webkit-transition: all 0s linear;
-	-moz-transition: all 0s linear;
-	-ms-transition: all 0s linear;
-	-o-transition: all 0s linear;
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
+	-o-transition: none !important;
 }
 
 // @keyframes pulse-black {

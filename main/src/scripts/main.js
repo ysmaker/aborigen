@@ -22,6 +22,8 @@ var Abo =
 		this.slider();
 		this.initMasks();
 		this.toggleMenu();
+		this.tabsClick();
+		this.columnsSize();
 	},
 
 	toggleMenu: function()
@@ -132,6 +134,42 @@ var Abo =
 	{
 		$('.subscribe__input').inputmask({"mask": "+7 999 999 99 99", showMaskOnHover: false, "placeholder": "·"});
 		$('.filter__item--phone').find('.filter__item-input').inputmask({"mask": "+7 999 999 99 99", showMaskOnHover: false, "placeholder": "·"});
+	},
+	tabsClick: function()
+	{
+		$('.resorts__item-button').on('click', function()
+		{
+			var slide = $(this).parents('.slick-slide');
+			var num = $(this).attr('data-num');
+			slide.find('.resorts__item-button').removeClass('resorts__item-button--inactive');
+			$(this).addClass('resorts__item-button--inactive');
+
+			slide.find('.resorts__item-content').addClass('resorts__item-content--hide');
+			slide.find('.resorts__item-tabs').find('.resorts__item-content[data-num='+num+']').removeClass('resorts__item-content--hide');
+			console.log(num);
+			Abo.columnsSize();
+		});
+	},
+	columnsSize: function()
+	{
+		var max = $('.resorts__item-content').not('.resorts__item-content--hide').find('.resorts__item-value').find('span').eq(0).text();
+		$('.resorts__item-content').not('.resorts__item-content--hide').find('.resorts__item-column').each(function( index )
+		{
+			if ($(this).siblings('.resorts__item-value').find('span').text() > max)
+				max = $(this).siblings('.resorts__item-value').find('span').text();
+		});
+		$('.resorts__item-content').not('.resorts__item-content--hide').find('.resorts__item-column').each(function( index )
+		{
+			$(this).css('height', function()
+			{
+				return (($(this).siblings('.resorts__item-value').find('span').text() / max)*50);
+			});
+		});
+		$('.resorts__item-content--hide').find('.resorts__item-column').each(function( index )
+		{
+			$(this).css('height', '0');
+		});
+		// console.log(max);
 	},
 };
 

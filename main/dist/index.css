@@ -1612,6 +1612,19 @@ body {
     left: 0;
     background-image: linear-gradient(180deg, rgba(24, 24, 24, 0.6) 8.33%, rgba(112, 112, 112, 0) 100%);
     z-index: 2; }
+  .header--short {
+    min-height: auto; }
+    .header--short:after {
+      background-image: linear-gradient(150.12deg, #3866E6 0%, #557EF3 100%), linear-gradient(0deg, #0090FF, #0090FF); }
+    .header--short .header__main {
+      padding-top: 24px;
+      padding-bottom: 24px; }
+    .header--short .header__menu {
+      margin-bottom: 0; }
+    .header--short .filter__item-submit {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px; }
 
 .header__main {
   max-width: 1120px;
@@ -1679,12 +1692,12 @@ body {
   letter-spacing: 0;
   color: #303030;
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.3s, transform 0s;
   visibility: hidden; }
   .header__nav--show {
     opacity: 1;
     visibility: visible;
-    transition: 0.3s; }
+    transition: 0.3s, transform 0s; }
 
 .header__nav-item {
   min-width: 248px;
@@ -2810,46 +2823,6 @@ h2.popular__title {
 .popular__wrap {
   position: relative; }
 
-.progress {
-  position: absolute;
-  top: -3px;
-  left: 304px;
-  display: block;
-  width: 285px;
-  height: 6px;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #D2D2D2; }
-
-.progress-fill {
-  display: block;
-  width: 0;
-  height: 100%;
-  background-image: linear-gradient(to right, #258EFA, #258EFA);
-  transition: 0.3s;
-  border-radius: 6px; }
-
-.popular__slider {
-  width: 100%;
-  padding-left: 163px; }
-  .popular__slider .slick-arrow {
-    top: 0;
-    width: auto;
-    height: auto;
-    z-index: 1; }
-  .popular__slider .slick-prev {
-    left: 163px; }
-  .popular__slider .slick-next {
-    left: 234px; }
-  .popular__slider .slick-list {
-    padding: 20px;
-    padding-left: 60px;
-    padding-top: 36px; }
-  .popular__slider .slick-slide {
-    margin-right: 12px; }
-  .popular__slider .slick-disabled path {
-    fill: #CCCCCC; }
-
 .popular__item-wrap {
   width: 230px;
   border-radius: 8px;
@@ -2924,20 +2897,6 @@ h2.popular__title {
     cursor: pointer;
     transition: 0.3s; }
 
-@media (max-width: 1360px) {
-  .popular__slider {
-    padding-left: 40px; }
-    .popular__slider .slick-list {
-      padding-left: 40px;
-      padding-top: 38px;
-      overflow: visible; }
-    .popular__slider .slick-prev {
-      left: 80px; }
-    .popular__slider .slick-next {
-      left: 150px; }
-  .progress {
-    left: 220px; } }
-
 @media (max-width: 1140px) {
   h2.popular__title {
     max-width: 540px;
@@ -2949,18 +2908,6 @@ h2.popular__title {
     padding-right: 45px; } }
 
 @media (max-width: 768px) {
-  .popular__slider {
-    padding-left: 28px; }
-    .popular__slider .slick-list {
-      padding-top: 51px;
-      padding-left: 0; }
-    .popular__slider .slick-prev {
-      left: 28px; }
-    .popular__slider .slick-next {
-      left: 81px; }
-  .progress {
-    left: 141px;
-    width: 191px; }
   h2.popular__title {
     max-width: 230px; } }
 
@@ -3106,36 +3053,13 @@ h2.best-tours__title {
   margin-bottom: 45px; }
 
 .best-tours__wrap {
-  position: relative;
-  max-width: 1120px;
-  margin-left: auto;
-  margin-right: auto; }
-
-.best-tours__slider {
-  width: 100%;
-  padding-left: 163px; }
-  .best-tours__slider .slick-arrow {
-    top: 0;
-    width: auto;
-    height: auto;
-    z-index: 1; }
-  .best-tours__slider .slick-prev {
-    left: 163px; }
-  .best-tours__slider .slick-next {
-    left: 234px; }
-  .best-tours__slider .slick-list {
-    padding: 20px;
-    padding-left: 60px;
-    padding-top: 36px; }
-  .best-tours__slider .slick-slide {
-    margin-right: 12px; }
-  .best-tours__slider .slick-disabled path {
-    fill: #CCCCCC; }
+  position: relative; }
 
 .best-tours__item-top {
   position: relative;
   display: block;
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   height: 146px;
   padding: 11px 12px;
   box-sizing: border-box;
@@ -3151,8 +3075,7 @@ h2.best-tours__title {
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    z-index: -1; }
+    right: 0; }
 
 .best-tours__tags {
   position: relative;
@@ -3202,6 +3125,7 @@ h2.best-tours__title {
   line-height: 18px;
   text-align: center;
   color: #258EFA;
+  outline: none;
   margin-left: auto;
   margin-right: auto;
   text-decoration: none;
@@ -3243,18 +3167,6 @@ h2.best-tours__title {
   line-height: 16px;
   color: #FFFFFF; }
 
-@media (max-width: 1360px) {
-  .best-tours__slider {
-    padding-left: 40px; }
-    .best-tours__slider .slick-list {
-      padding-left: 40px;
-      padding-top: 38px;
-      overflow: visible; }
-    .best-tours__slider .slick-prev {
-      left: 80px; }
-    .best-tours__slider .slick-next {
-      left: 150px; } }
-
 @media (max-width: 1140px) {
   h2.best-tours__title {
     max-width: 540px;
@@ -3266,15 +3178,6 @@ h2.best-tours__title {
     padding-right: 45px; } }
 
 @media (max-width: 768px) {
-  .best-tours__slider {
-    padding-left: 28px; }
-    .best-tours__slider .slick-list {
-      padding-top: 51px;
-      padding-left: 0; }
-    .best-tours__slider .slick-prev {
-      left: 28px; }
-    .best-tours__slider .slick-next {
-      left: 81px; }
   h2.best-tours__title {
     max-width: 290px; } }
 
@@ -3373,7 +3276,10 @@ h2.guide__title {
     padding-right: 40px; }
   .guide__descr {
     padding-left: 40px;
-    padding-right: 40px; } }
+    padding-right: 40px; }
+  .guide__wrap-item {
+    padding: 20px 25px;
+    line-height: 32px; } }
 
 .resorts {
   background-color: #FFFFFF;
@@ -3406,154 +3312,151 @@ h2.resorts__title {
   margin-bottom: 45px; }
 
 .resorts__wrap {
-  position: relative;
-  max-width: 1120px;
-  margin-left: auto;
-  margin-right: auto; }
+  position: relative; }
 
-.resorts__slider {
-  width: 100%;
-  padding-left: 163px; }
-  .resorts__slider .slick-arrow {
-    top: 0;
-    width: auto;
-    height: auto;
-    z-index: 1; }
-  .resorts__slider .slick-prev {
-    left: 163px; }
-  .resorts__slider .slick-next {
-    left: 234px; }
-  .resorts__slider .slick-list {
-    padding: 20px;
-    padding-left: 60px;
-    padding-top: 36px; }
-  .resorts__slider .slick-slide {
-    margin-right: 12px; }
-  .resorts__slider .slick-disabled path {
-    fill: #CCCCCC; }
+.resorts__slider-item {
+  outline: none; }
 
-.resorts__item-top {
+.resorts__item-wrap {
   position: relative;
-  display: block;
-  width: 350px;
-  height: 146px;
-  padding: 11px 12px;
-  box-sizing: border-box;
-  outline: none;
-  margin-bottom: -24px; }
-  .resorts__item-top:hover {
-    cursor: pointer; }
-  .resorts__item-top img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px 8px 0 0;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1; }
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 861px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(48, 48, 48, 0.15);
+  border-radius: 24px;
+  padding: 27px;
+  outline: none; }
 
-.resorts__tags {
-  position: relative;
-  z-index: 2;
+.resorts__item-note {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 10px; }
-
-.resorts__tags-item {
-  padding: 4px 8px;
-  background-color: #fff;
+  background: #F6F6F6;
   border-radius: 8px;
+  padding: 6px;
+  padding-left: 14px;
+  padding-right: 71px;
   font-family: "Poppins SemiBold", "PT Sans", sans-serif;
   font-weight: 600;
-  font-size: 10px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #414141; }
+  .resorts__item-note svg {
+    width: 24px;
+    margin-right: 14px; }
+  .resorts__item-note span {
+    display: block; }
+
+.resorts__item-left {
+  margin-right: 24px; }
+  .resorts__item-left img {
+    width: 358px;
+    height: 328px;
+    border-radius: 8px;
+    margin-bottom: 20px; }
+
+.resorts__item-country {
+  font-family: "Poppins SemiBold", "PT Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
   line-height: 14px;
-  color: #000000; }
-  .resorts__tags-item:not(:last-child) {
-    margin-right: 7px; }
-  .resorts__tags-item span {
-    color: #35C677; }
+  color: #303030;
+  margin-bottom: 12px; }
 
-.resorts__item-bottom {
-  position: relative;
-  background-color: #FFFFFF;
-  border: 1px solid rgba(240, 240, 240, 0.7);
-  box-shadow: 0px 0px 20px rgba(48, 48, 48, 0.15);
-  border-radius: 24px 24px 8px 8px;
-  padding: 15px; }
-
-.resorts__item-stars {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 5px; }
-  .resorts__item-stars svg:not(:last-child) {
-    margin-right: 5px; }
-
-.resorts__item-title {
-  display: block;
-  width: max-content;
+.resorts__item-city {
   font-family: "Poppins SemiBold", "PT Sans", sans-serif;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 18px;
-  text-align: center;
-  color: #258EFA;
-  margin-left: auto;
-  margin-right: auto;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: 0.3s;
-  margin-bottom: 23px; }
-  .resorts__item-title:hover {
-    border-bottom: 1px solid #258EFA;
-    transition: 0.3s; }
+  font-size: 30px;
+  line-height: 26px;
+  color: #303030;
+  margin-bottom: 20px; }
 
-.resorts__item-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 30px; }
-
-.resorts__item-prop {
+.resorts__item-descr {
   font-family: "Poppins Regular", "PT Sans", sans-serif;
   font-size: 14px;
-  line-height: 16px;
-  color: #596C80; }
-  .resorts__item-prop svg {
-    vertical-align: middle;
-    margin-right: 2px; }
-  .resorts__item-prop:not(:last-child) {
-    margin-bottom: 2px; }
+  line-height: 20px;
+  color: #303030;
+  margin-bottom: 70px; }
+
+.resorts__item-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #E6EEF5;
+  margin-bottom: 14px; }
 
 .resorts__item-button {
-  width: 100%;
-  padding: 17px 72px;
-  border: none;
-  outline: none;
-  background: #258EFA;
-  border-radius: 8px;
-  text-align: center;
-  font-family: "Poppins Regular", "PT Sans", sans-serif;
+  font-family: "Poppins SemiBold", "PT Sans", sans-serif;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
-  color: #FFFFFF; }
+  font-size: 16px;
+  line-height: 19px;
+  color: #263238;
+  pointer-events: all;
+  transition: 0.3s;
+  outline: none;
+  border: none; }
+  .resorts__item-button--inactive {
+    color: #0090FF;
+    pointer-events: none;
+    transition: 0.3s; }
+    .resorts__item-button--inactive svg path {
+      fill: #0090FF;
+      transition: 0.3s; }
+  .resorts__item-button:not(:last-child) {
+    margin-right: 50px; }
+  .resorts__item-button svg {
+    vertical-align: middle; }
+    .resorts__item-button svg path {
+      transition: 0.3s; }
 
-@media (max-width: 1360px) {
-  .resorts__slider {
-    padding-left: 40px; }
-    .resorts__slider .slick-list {
-      padding-left: 40px;
-      padding-top: 38px;
-      overflow: visible; }
-    .resorts__slider .slick-prev {
-      left: 80px; }
-    .resorts__slider .slick-next {
-      left: 150px; } }
+.resorts__item-contents {
+  position: relative;
+  height: 84px; }
+
+.resorts__item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s;
+  opacity: 1;
+  font-family: "Poppins Regular", "PT Sans", sans-serif;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+  z-index: 1;
+  text-align: center;
+  overflow: hidden; }
+  .resorts__item-content--hide {
+    z-index: 0;
+    visibility: none;
+    opacity: 0;
+    transition: opacity 0.3s; }
+
+.resorts__item-month {
+  width: 36px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between; }
+
+.resorts__item-value {
+  margin-bottom: auto; }
+
+.resorts__item-column {
+  width: 30px;
+  height: 0px;
+  transition: height 0.9s;
+  background-color: #D24949;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  margin-top: 4px; }
 
 @media (max-width: 1140px) {
   h2.resorts__title {
@@ -3565,24 +3468,149 @@ h2.resorts__title {
     padding-left: 45px;
     padding-right: 45px; } }
 
+@media (max-width: 1024px) {
+  .resorts__item-wrap {
+    width: 300px;
+    flex-direction: column;
+    padding: 17px; }
+  .resorts__item-left {
+    margin-right: 0;
+    margin-bottom: 18px; }
+    .resorts__item-left img {
+      width: 100%;
+      height: 143px;
+      margin-bottom: 6px; }
+  .resorts__item-city {
+    font-size: 24px;
+    line-height: 26px; }
+  .resorts__item-descr {
+    margin-bottom: 24px; }
+  .resorts__item-contents {
+    overflow-x: scroll; }
+  .resorts__item-content {
+    width: 426px; } }
+
 @media (max-width: 768px) {
-  .resorts__slider {
-    padding-left: 28px; }
-    .resorts__slider .slick-list {
-      padding-top: 51px;
-      padding-left: 0; }
-    .resorts__slider .slick-prev {
-      left: 28px; }
-    .resorts__slider .slick-next {
-      left: 81px; }
   h2.resorts__title {
     max-width: 290px; } }
 
+.slider {
+  display: flex; }
+  .slider .slick-arrow {
+    top: 0;
+    width: auto;
+    height: auto;
+    z-index: 1; }
+  .slider .slick-list {
+    padding: 20px;
+    padding-left: 60px;
+    padding-top: 36px; }
+  .slider .slick-slide {
+    margin-right: 12px;
+    outline: none; }
+  .slider .slick-disabled path {
+    fill: #CCCCCC; }
+  .slider .slide:not(:first-child) {
+    display: none; }
+  .slider .slide:first-child {
+    padding-top: 36px; }
+
+.slick-initialized .slide:first-child {
+  padding-top: 0; }
+
+.slick-initialized .slide:not(:first-child) {
+  display: block; }
+
+.progress {
+  position: absolute;
+  top: -3px;
+  display: block;
+  width: 285px;
+  height: 6px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #D2D2D2; }
+
+.progress-fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-image: linear-gradient(to right, #258EFA, #258EFA);
+  transition: 0.3s;
+  border-radius: 6px; }
+
+@media (min-width: 1440px) {
+  .slider .slick-prev {
+    left: calc( ( 100vw - 1114px ) / 2); }
+  .slider .slick-next {
+    left: calc(( ( 100vw - 1114px ) / 2 ) + 71px); }
+  .progress {
+    left: calc(( ( 100vw - 1114px ) / 2 ) + 141px); } }
+
+@media (max-width: 1440px) {
+  .slider {
+    width: 100%; }
+    .slider .slick-prev {
+      left: 163px; }
+    .slider .slick-next {
+      left: 234px; }
+  .progress {
+    left: 304px; } }
+
+@media (max-width: 1360px) {
+  .slider {
+    padding-left: 40px; }
+    .slider .slick-list {
+      padding-left: 40px;
+      padding-top: 38px;
+      overflow: visible; }
+    .slider .slick-prev {
+      left: 80px; }
+    .slider .slick-next {
+      left: 150px; }
+  .progress {
+    left: 220px; } }
+
+@media (max-width: 768px) {
+  .slider {
+    padding-left: 28px; }
+    .slider .slick-list {
+      padding-top: 51px;
+      padding-left: 0; }
+    .slider .slick-prev {
+      left: 28px; }
+    .slider .slick-next {
+      left: 81px; }
+  .progress {
+    left: 141px;
+    width: 191px; } }
+
+.country-tour {
+  background-image: linear-gradient(150.12deg, #3866E6 0%, #557EF3 100%); }
+  .country-tour .filter__item-submit {
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px; }
+
+.country-tour__main {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 106px 180px;
+  padding-bottom: 130px; }
+
+h2.country-tour__title {
+  max-width: 800px;
+  text-align: left;
+  margin: 0;
+  color: #FFF;
+  margin-bottom: 25px; }
+
 .preload * {
-  -webkit-transition: all 0s linear;
-  -moz-transition: all 0s linear;
-  -ms-transition: all 0s linear;
-  -o-transition: all 0s linear; }
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important; }
 
 
 /*# sourceMappingURL=index.css.map*/
