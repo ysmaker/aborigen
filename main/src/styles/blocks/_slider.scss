@@ -1,5 +1,6 @@
 .slider
 {
+	display: flex;
 	.slick-arrow
 	{
 		top: 0;
@@ -16,6 +17,7 @@
 	.slick-slide
 	{
 		margin-right: 12px;
+		outline: none;
 	}
 	.slick-disabled
 	{
@@ -24,6 +26,22 @@
 			fill: #CCCCCC;
 		}
 	}
+	.slide:not(:first-child)
+	{
+		display: none;
+	}
+	.slide:first-child
+	{
+		padding-top: 36px;
+	}
+}
+.slick-initialized .slide:first-child
+{
+	padding-top: 0;
+}
+.slick-initialized .slide:not(:first-child)
+{
+	display: block;
 }
 .progress
 {
@@ -50,7 +68,7 @@
 {
 	.slider
 	{
-		padding-left: calc( ( 100vw - 1114px ) / 2 );
+		// padding-left: calc( ( 100vw - 1114px ) / 2 );
 		.slick-prev
 		{
 			left: calc( ( 100vw - 1114px ) / 2 );
@@ -71,7 +89,7 @@
 	.slider
 	{
 		width: 100%;
-		padding-left: 163px;
+		// padding-left: 163px;
 		.slick-prev
 		{
 			left: 163px;

@@ -16,6 +16,29 @@
 		background-image: linear-gradient(180deg, rgba(24, 24, 24, 0.6) 8.33%, rgba(112, 112, 112, 0) 100%);
 		z-index: 2;
 	}
+	&--short
+	{
+		min-height: auto;
+		&:after
+		{
+			background-image: linear-gradient(150.12deg, #3866E6 0%, #557EF3 100%), linear-gradient(0deg, #0090FF, #0090FF);
+		}
+		.header__main
+		{
+			padding-top: 24px;
+			padding-bottom: 24px;
+		}
+		.header__menu
+		{
+			margin-bottom: 0;
+		}
+		.filter__item-submit
+		{
+			width: 100%;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
 }
 .header__main
 {
@@ -106,13 +129,13 @@
 	letter-spacing: 0;
 	color: #303030;
 	opacity: 0;
-	transition: 0.3s;
+	transition: 0.3s, transform 0s;
 	visibility: hidden;
 	&--show
 	{
 		opacity: 1;
 		visibility: visible;
-		transition: 0.3s;
+		transition: 0.3s, transform 0s;
 	}
 }
 .header__nav-item
