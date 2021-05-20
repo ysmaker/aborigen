@@ -191,6 +191,27 @@ h2.resorts__title
 		opacity: 0;
 		transition: opacity 0.3s;
 	}
+	&--weather
+	{
+		.resorts__item-column
+		{
+			background-color: #D24949;
+		}
+	}
+	&--rainfall
+	{
+		.resorts__item-column
+		{
+			background-color: #6e6e6e;
+		}
+	}
+	&--water
+	{
+		.resorts__item-column
+		{
+			background-color: #3f7bf9;
+		}
+	}
 }
 .resorts__item-month
 {
@@ -210,7 +231,6 @@ h2.resorts__title
 	width: 30px;
 	height: 0px;
 	transition: height 0.9s;
-	background-color: #D24949;
 	border-radius: 4px;
 	margin-bottom: 4px;
 	margin-top: 4px;

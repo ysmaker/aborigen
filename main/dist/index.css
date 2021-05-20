@@ -1621,10 +1621,6 @@ body {
       padding-bottom: 24px; }
     .header--short .header__menu {
       margin-bottom: 0; }
-    .header--short .filter__item-submit {
-      width: 100%;
-      padding-left: 15px;
-      padding-right: 15px; }
 
 .header__main {
   max-width: 1120px;
@@ -3018,7 +3014,7 @@ h2.countries__title {
 
 @media (max-width: 768px) {
   .breadcrumbs {
-    padding: 15px 40px; }
+    padding: 15px 15px; }
   .breadcrumbs__list {
     flex-wrap: wrap; } }
 
@@ -3437,6 +3433,12 @@ h2.resorts__title {
     visibility: none;
     opacity: 0;
     transition: opacity 0.3s; }
+  .resorts__item-content--weather .resorts__item-column {
+    background-color: #D24949; }
+  .resorts__item-content--rainfall .resorts__item-column {
+    background-color: #6e6e6e; }
+  .resorts__item-content--water .resorts__item-column {
+    background-color: #3f7bf9; }
 
 .resorts__item-month {
   width: 36px;
@@ -3453,7 +3455,6 @@ h2.resorts__title {
   width: 30px;
   height: 0px;
   transition: height 0.9s;
-  background-color: #D24949;
   border-radius: 4px;
   margin-bottom: 4px;
   margin-top: 4px; }
@@ -3514,6 +3515,34 @@ h2.resorts__title {
     display: none; }
   .slider .slide:first-child {
     padding-top: 36px; }
+
+.big-slider-for .hotel__slider-big-item:not(:first-child) {
+  display: none; }
+
+.big-slider-for .big-slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  height: auto;
+  z-index: 1;
+  opacity: 0.8; }
+
+.big-slider-for .big-slick-prev {
+  transform: translateY(-50%) rotate(-180deg);
+  left: 20px; }
+
+.big-slider-for .big-slick-next {
+  right: 20px; }
+
+.big-slider-nav .hotel__slider-item:not(:first-child) {
+  display: none; }
+
+.slick-initialized .hotel__slider-big-item:not(:first-child) {
+  display: block; }
+
+.slick-initialized .hotel__slider-item:not(:first-child) {
+  display: block; }
 
 .slick-initialized .slide:first-child {
   padding-top: 0; }
@@ -3585,6 +3614,251 @@ h2.resorts__title {
     left: 141px;
     width: 191px; } }
 
+.hotel {
+  background-color: #FFF; }
+
+.hotel__main {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 32px 180px;
+  padding-bottom: 136px; }
+
+h2.hotel__title {
+  text-align: left; }
+
+.hotel__stars {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .hotel__stars svg:not(:last-child) {
+    margin-right: 3px; }
+
+.hotel__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 29px; }
+
+.hotel__top-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+.hotel__price {
+  font-family: "Poppins Bold", "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #3A3A3A;
+  margin-right: 34px; }
+
+.hotel__button {
+  background-image: linear-gradient(150.12deg, #3866E6 0%, #557EF3 100%), #0090FF;
+  border-radius: 8px;
+  padding: 17px 42px;
+  font-family: "Poppins Regular", "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF; }
+
+.hotel__place {
+  font-family: "Poppins Regular", "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  color: #303030; }
+
+.hotel__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+
+.hotel__big-slider {
+  max-width: 715px;
+  margin-right: 33px; }
+
+.hotel__slider-big-item {
+  margin-bottom: 22px;
+  border-radius: 8px;
+  overflow: hidden; }
+  .hotel__slider-big-item img {
+    width: 100%;
+    height: 356px;
+    object-fit: cover; }
+
+.hotel__slider-item {
+  margin-right: 6px; }
+  .hotel__slider-item img {
+    width: 100px;
+    height: 60px;
+    object-fit: cover; }
+
+.hotel__wrap {
+  width: 332px;
+  flex-shrink: 2; }
+
+.hotel__reviews {
+  width: 332px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(48, 48, 48, 0.15);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 12px; }
+
+.hotel__reviews-point {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 11px; }
+
+.hotel__reviews-count {
+  padding: 2px 4px;
+  background: #35C677;
+  font-family: "Poppins Bold", "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  margin-right: 12px; }
+
+.hotel__reviews-descr {
+  font-family: "Poppins Bold", "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000; }
+
+.hotel__reviews-points {
+  font-family: "Poppins Regular", "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  color: #858585;
+  margin-bottom: 11px; }
+
+.hotel__reviews-more {
+  font-family: "Poppins SemiBold", "PT Sans", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #0090FF;
+  text-decoration: none;
+  outline: none;
+  border: 1px solid transparent; }
+  .hotel__reviews-more:hover {
+    border: 1px solid #0090FF; }
+
+.hotel__advantages {
+  width: 332px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(48, 48, 48, 0.15);
+  border-radius: 8px;
+  padding: 24px; }
+
+.hotel__advantages-title {
+  font-family: "Poppins Bold", "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 18px; }
+
+.hotel__advantages-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 14px; }
+
+.hotel__advantages-item {
+  font-family: "Poppins Regular", "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000; }
+  .hotel__advantages-item svg {
+    vertical-align: middle;
+    margin-right: 9px; }
+  .hotel__advantages-item:not(:last-child) {
+    margin-bottom: 12px; }
+
+.hotel__advantages-link {
+  font-family: "Poppins SemiBold", "PT Sans", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #0090FF;
+  text-decoration: none;
+  outline: none;
+  border: 1px solid transparent; }
+  .hotel__advantages-link:hover {
+    border: 1px solid #0090FF; }
+
+@media (max-width: 1439px) {
+  .hotel__main {
+    max-width: 912px;
+    padding-left: 45px;
+    padding-right: 45px; }
+  .hotel__big-slider {
+    max-width: 524px; } }
+
+@media (max-width: 1024px) {
+  .hotel__top {
+    flex-direction: column; }
+  h2.hotel__title {
+    margin-bottom: 8px; }
+  .hotel__place {
+    margin-bottom: 15px; }
+  .hotel__bottom {
+    display: block; }
+  .hotel__big-slider {
+    margin-right: 0; }
+  .big-slider-nav {
+    display: none; }
+  .hotel__button {
+    background-image: none;
+    padding: 0;
+    font-family: "Poppins Regular", "PT Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #0090FF; } }
+
+@media (max-width: 768px) {
+  .hotel__main {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 16px; }
+  .hotel__top {
+    margin-bottom: 0; }
+  .hotel__stars {
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 8px; }
+  .hotel__top-left {
+    padding-left: 12px;
+    padding-right: 12px; }
+  .hotel__top-right {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #F8F8F8;
+    justify-content: space-between;
+    border-top: 1px solid rgba(207, 218, 230, 0.5);
+    padding: 14px 12px; }
+  .hotel__big-slider {
+    max-width: 800px; }
+  .hotel__slider-big-item {
+    border-radius: 0; }
+  .hotel__wrap {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 345px;
+    margin-top: -70px;
+    z-index: 3; }
+  .hotel__reviews {
+    width: 100%; }
+  .hotel__advantages {
+    width: 100%; } }
+
 .country-tour {
   background-image: linear-gradient(150.12deg, #3866E6 0%, #557EF3 100%); }
   .country-tour .filter__item-submit {
@@ -3605,6 +3879,365 @@ h2.country-tour__title {
   margin: 0;
   color: #FFF;
   margin-bottom: 25px; }
+
+@media (max-width: 1140px) {
+  .country-tour__main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 33px;
+    padding-right: 33px; }
+  h2.country-tour__title {
+    text-align: center; }
+  .country-tour .filter {
+    max-width: 347px;
+    padding-left: 0;
+    padding-right: 0; }
+  .country-tour .filter__item {
+    width: 50%; }
+    .country-tour .filter__item:first-child {
+      width: 100%; }
+      .country-tour .filter__item:first-child .filter__item-input {
+        border-radius: 8px 8px 0 0; }
+    .country-tour .filter__item:last-child {
+      width: 100%; }
+  .country-tour .select--tourists {
+    width: 100%; }
+  .country-tour .filter__item-submit {
+    width: 100%; } }
+
+@media (max-width: 768px) {
+  .country-tour__main {
+    padding-top: 40px;
+    padding-bottom: 40px; } }
+
+.descr {
+  background-color: #F4F4F4;
+  padding: 43px 203px; }
+
+.descr__main {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 15px rgba(48, 48, 48, 0.15);
+  border-radius: 8px;
+  max-width: 1034px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 47px;
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-bottom: 65px; }
+
+.descr__stars {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 13px; }
+  .descr__stars svg:not(:last-child) {
+    margin-right: 3px; }
+
+.descr__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 73px; }
+
+.descr__content-text {
+  max-width: 394px;
+  margin-right: 36px; }
+
+.descr__title {
+  font-family: "Poppins Bold", "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #3A3A3A;
+  margin: 0;
+  margin-bottom: 30px; }
+
+.descr__map-main iframe {
+  max-width: 470px;
+  width: 100%;
+  height: 340px; }
+
+.descr__about {
+  font-family: "Poppins Regular", "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #303030;
+  margin-bottom: 12px; }
+
+.descr__link {
+  font-family: "Poppins SemiBold", "PT Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #0090FF;
+  text-decoration: none;
+  outline: none;
+  border: 1px solid transparent; }
+  .descr__link:hover {
+    border: 1px solid #0090FF; }
+
+.descr__view {
+  margin-bottom: 62px; }
+
+.descr__view-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; }
+
+.descr__view-column {
+  max-width: 242px;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 12px; }
+  .descr__view-column:not(:last-child) {
+    margin-right: 26px; }
+
+.descr__view-item {
+  font-family: "Poppins Regular", "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000; }
+  .descr__view-item svg {
+    vertical-align: middle;
+    margin-right: 9px; }
+  .descr__view-item:not(:last-child) {
+    margin-bottom: 12px; }
+
+.descr__feedback-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .descr__feedback-message:not(:last-child) {
+    margin-bottom: 24px; }
+
+.descr__feedback-user {
+  max-width: 132px;
+  width: 100%;
+  margin-right: 12px; }
+
+.descr__feedback-point {
+  max-width: fit-content;
+  padding: 2px 4px;
+  background-color: #35C677;
+  font-family: "Poppins Bold", "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin-bottom: 14px; }
+  .descr__feedback-point--yellow {
+    background-color: #F3B226; }
+
+.descr__feedback-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-bottom: 12px; }
+
+.descr__feedback-user-name {
+  font-family: "Poppins Regular", "PT Sans", sans-serif;
+  font-size: 11px;
+  line-height: 16px;
+  color: #182E3E; }
+
+.descr__feedback-date {
+  font-family: "Poppins SemiBold", "PT Sans", sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 15px;
+  color: #00A3FF;
+  opacity: 0.9;
+  text-align: right;
+  margin-bottom: 10px; }
+
+.descr__feedback-main {
+  font-family: "Poppins Regular", "PT Sans", sans-serif;
+  font-size: 10px;
+  line-height: 15px;
+  color: #182E3E;
+  margin-bottom: 12px; }
+
+.descr__feedback-more {
+  font-family: "Poppins SemiBold", "PT Sans", sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 15px;
+  color: #00A3FF;
+  opacity: 0.9;
+  text-decoration: none;
+  outline: none;
+  border: 1px solid transparent; }
+  .descr__feedback-more:hover {
+    border: 1px solid #00A3FF; }
+
+@media (max-width: 1360px) {
+  .descr {
+    padding: 43px 80px; }
+  .descr__content {
+    flex-direction: column; }
+  .descr__content-text {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 62px; }
+  .descr__feedback-message {
+    flex-direction: column; }
+  .descr__feedback-user {
+    margin-bottom: 12px; }
+  .descr__feedback-date {
+    text-align-last: left; } }
+
+@media (max-width: 1140px) {
+  .descr__view-list {
+    overflow: scroll; }
+  .descr__view-item {
+    width: 242px; }
+  .descr {
+    padding: 0; } }
+
+@media (max-width: 768px) {
+  .descr__main {
+    padding-left: 0;
+    padding-right: 0; }
+  .descr__content-text {
+    padding-left: 17px;
+    padding-right: 38px; }
+  .descr__stars {
+    padding-left: 17px;
+    padding-right: 17px; }
+  .descr__title--map {
+    padding-left: 17px;
+    padding-right: 17px; }
+  .descr__map {
+    width: 100%; }
+  .descr__view {
+    padding-left: 15px;
+    padding-right: 17px; }
+  .descr__feedback {
+    padding-left: 17px;
+    padding-right: 17px; } }
+
+.rating {
+  background-color: #F7F7F7; }
+
+.rating__main {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 42px;
+  padding-bottom: 59px;
+  overflow: hidden; }
+
+h2.rating__title {
+  max-width: 804px;
+  padding-left: 160px;
+  padding-right: 160px;
+  margin-bottom: 25px;
+  color: #3A3A3A; }
+
+.rating__descr {
+  max-width: 670px;
+  padding-left: 160px;
+  padding-right: 160px;
+  margin: 0 auto;
+  font-family: "Poppins Regular", "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #303030;
+  text-align: center;
+  margin-bottom: 32px; }
+
+.rating__wrap {
+  position: relative; }
+
+.rating__item-wrap {
+  width: 801px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 24px;
+  box-shadow: 0 0 20px 5px rgba(48, 48, 48, 0.15);
+  padding: 30px;
+  text-decoration: none; }
+
+.rating__item-left {
+  width: 359px;
+  height: 235px;
+  position: relative;
+  margin-right: 23px; }
+
+.rating__view {
+  position: absolute;
+  bottom: 19px;
+  left: 25px; }
+  .rating__view span:first-child {
+    padding: 2px 4px;
+    background: #35C677;
+    font-family: "Poppins Bold", "PT Sans", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-right: 12px; }
+  .rating__view span:last-child {
+    font-family: "Poppins Bold", "PT Sans", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 28px;
+    color: #FFFFFF;
+    outline: none; }
+
+.rating__item-country {
+  font-family: "Poppins SemiBold", "PT Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  color: #303030;
+  margin-bottom: 15px; }
+
+.rating__item-title {
+  font-family: "Poppins SemiBold", "PT Sans", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 26px;
+  color: #303030;
+  margin-bottom: 24px; }
+  .rating__item-title span:first-child {
+    margin-right: 5px; }
+
+.rating__item-price {
+  font-family: "Poppins Bold", "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #3A3A3A;
+  margin-bottom: 24px; }
+
+.rating__item-descr {
+  font-family: "Poppins Regular", "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #303030; }
+
+@media (max-width: 768px) {
+  .rating__item-wrap {
+    width: 276px;
+    flex-direction: column;
+    padding: 20px; }
+  .rating__item-left {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-right: 0;
+    margin-bottom: 12px; }
+    .rating__item-left img {
+      width: 100%; }
+  .rating__item-title {
+    display: flex;
+    flex-direction: column-reverse; }
+    .rating__item-title span:last-child {
+      margin-bottom: 8px; } }
 
 .preload * {
   -webkit-transition: none !important;

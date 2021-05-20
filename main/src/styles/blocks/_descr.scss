@@ -1,0 +1,294 @@
+.descr
+{
+	background-color: #F4F4F4;
+	padding: 43px 203px;
+}
+.descr__main
+{
+	background: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+	box-shadow: 0px 0px 15px rgba(48, 48, 48, 0.15);
+	border-radius: 8px;
+	max-width: 1034px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 47px;
+	padding-left: 36px;
+	padding-right: 36px;
+	padding-bottom: 65px;
+}
+.descr__stars
+{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 13px;
+	svg
+	{
+		&:not(:last-child)
+		{
+			margin-right: 3px;
+		}
+	}
+}
+.descr__content
+{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 73px;
+}
+.descr__content-text
+{
+	max-width: 394px;
+	margin-right: 36px;
+}
+.descr__title
+{
+	font-family: $bold;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 28px;
+	color: #3A3A3A;
+	margin: 0;
+	margin-bottom: 30px;
+}
+.descr__map-main
+{
+	iframe
+	{
+		max-width: 470px;
+		width: 100%;
+		height: 340px;
+	}
+}
+.descr__about
+{
+	font-family: $regular;
+	font-size: 16px;
+	line-height: 24px;
+	color: #303030;
+	margin-bottom: 12px;
+}
+.descr__link
+{
+	font-family: $semi;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 24px;
+	color: #0090FF;
+	text-decoration: none;
+	outline: none;
+	border: 1px solid transparent;
+	&:hover
+	{
+		border: 1px solid #0090FF;
+	}
+}
+.descr__view
+{
+	margin-bottom: 62px;
+}
+.descr__view-list
+{
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.descr__view-column
+{
+	max-width: 242px;
+	list-style-type: none;
+	padding-left: 0;
+	margin-bottom: 12px;
+	&:not(:last-child)
+	{
+		margin-right: 26px;
+	}
+}
+.descr__view-item
+{
+	font-family: $regular;
+	font-size: 13px;
+	line-height: 16px;
+	color: #000000;
+	svg
+	{
+		vertical-align: middle;
+		margin-right: 9px;
+	}
+	&:not(:last-child)
+	{
+		margin-bottom: 12px;
+	}
+}
+.descr__feedback-message
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	&:not(:last-child)
+	{
+		margin-bottom: 24px;
+	}
+}
+.descr__feedback-user
+{
+	max-width: 132px;
+	width: 100%;
+	margin-right: 12px;
+}
+.descr__feedback-point
+{
+	max-width: fit-content;
+	padding: 2px 4px;
+	background-color: #35C677;
+	font-family: $bold;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 20px;
+	color: #FFFFFF;
+	margin-bottom: 14px;
+	&--yellow
+	{
+		background-color: #F3B226;
+	}
+}
+.descr__feedback-avatar
+{
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	margin-bottom: 12px;
+}
+.descr__feedback-user-name
+{
+	font-family: $regular;
+	font-size: 11px;
+	line-height: 16px;
+	color: #182E3E;
+}
+.descr__feedback-date
+{
+	font-family: $semi;
+	font-weight: 600;
+	font-size: 10px;
+	line-height: 15px;
+	color: #00A3FF;
+	opacity: 0.9;
+	text-align: right;
+	margin-bottom: 10px;
+}
+.descr__feedback-main
+{
+	font-family: $regular;
+	font-size: 10px;
+	line-height: 15px;
+	color: #182E3E;
+	margin-bottom: 12px;
+}
+.descr__feedback-more
+{
+	font-family: $semi;
+	font-weight: 600;
+	font-size: 10px;
+	line-height: 15px;
+	color: #00A3FF;
+	opacity: 0.9;
+	text-decoration: none;
+	outline: none;
+	border: 1px solid transparent;
+	&:hover
+	{
+		border: 1px solid #00A3FF;
+	}
+}
+
+@media (max-width: 1360px)
+{
+	.descr
+	{
+		padding: 43px 80px;
+	}
+	.descr__content
+	{
+		flex-direction: column;
+	}
+	.descr__content-text
+	{
+		max-width: 100%;
+		margin-right: 0;
+		margin-bottom: 62px;
+	}
+	.descr__feedback-message
+	{
+		flex-direction: column;
+	}
+	.descr__feedback-user
+	{
+		margin-bottom: 12px;
+	}
+	.descr__feedback-date
+	{
+		text-align-last: left;
+	}
+}
+
+@media (max-width: 1140px)
+{
+	.descr__view-list
+	{
+		overflow: scroll;
+	}
+	.descr__view-item
+	{
+		width: 242px;
+	}
+	.descr
+	{
+		padding: 0;
+	}
+
+}
+
+@media (max-width: 768px)
+{
+	.descr__main
+	{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.descr__content-text
+	{
+		padding-left: 17px;
+		padding-right: 38px;
+	}
+	.descr__stars
+	{
+		padding-left: 17px;
+		padding-right: 17px;
+	}
+	.descr__title
+	{
+		&--map
+		{
+			padding-left: 17px;
+			padding-right: 17px;
+		}
+	}
+	.descr__map
+	{
+		width: 100%;
+	}
+	.descr__view
+	{
+		padding-left: 15px;
+		padding-right: 17px;
+	}
+	.descr__feedback
+	{
+		padding-left: 17px;
+		padding-right: 17px;
+	}
+}

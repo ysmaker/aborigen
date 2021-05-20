@@ -20,12 +20,27 @@ var Abo =
 		this.datapickerOptions();
 		this.faqSwitch();
 		this.slider();
+		this.bigSlider();
 		this.initMasks();
 		this.toggleMenu();
 		this.tabsClick();
 		this.columnsSize();
 	},
+	initMap: function()
+	{
 
+		var coordinates = {lat: 41.00877381264615, lng: 28.976113208815722},
+			map = new google.maps.Map(document.getElementById('map'), {
+				center: coordinates,
+				zoom: 5,
+				disableDefaultUI: boolean
+			});
+		var marker = new google.maps.Marker({
+			position: coordinates,
+			map: map,
+			icon: 'img/marker.svg'
+		});
+	},
 	toggleMenu: function()
 	{
 		var nav = $('.header__nav');
@@ -130,6 +145,32 @@ var Abo =
 			});
 		});
 	},
+	bigSlider: function()
+	{
+		const $ = require('jquery');
+		$(window).on('load', function()
+		{
+			$('.big-slider-for').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				swipeToSlide: true,
+				fade: true,
+				asNavFor: '.big-slider-nav',
+				prevArrow: '<svg class="big-slick-prev big-slick-arrow" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 0C10.7452 0 0 10.2403 0 22.8724C0 35.5044 10.7452 45.7447 24 45.7447C37.2548 45.7447 48 35.5044 48 22.8724C48 10.2403 37.2548 0 24 0ZM29.5606 23.8832L22.8106 30.3161C22.5177 30.5952 22.1338 30.7348 21.75 30.7348C20.4257 30.7348 19.7418 29.1976 20.6894 28.2945L26.3787 22.8725L20.6894 17.4504C20.1036 16.8921 20.1036 15.987 20.6894 15.4288C21.2752 14.8705 22.2249 14.8705 22.8107 15.4288L29.5607 21.8616C30.1464 22.4199 30.1464 23.325 29.5606 23.8832Z" fill="white"/></svg>',
+				nextArrow: '<svg class="big-slick-next big-slick-arrow" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 0C10.7452 0 0 10.2403 0 22.8724C0 35.5044 10.7452 45.7447 24 45.7447C37.2548 45.7447 48 35.5044 48 22.8724C48 10.2403 37.2548 0 24 0ZM29.5606 23.8832L22.8106 30.3161C22.5177 30.5952 22.1338 30.7348 21.75 30.7348C20.4257 30.7348 19.7418 29.1976 20.6894 28.2945L26.3787 22.8725L20.6894 17.4504C20.1036 16.8921 20.1036 15.987 20.6894 15.4288C21.2752 14.8705 22.2249 14.8705 22.8107 15.4288L29.5607 21.8616C30.1464 22.4199 30.1464 23.325 29.5606 23.8832Z" fill="white"/></svg>',
+			});
+			$('.big-slider-nav').slick({
+				infinite: true,
+				variableWidth: true,
+				swipeToSlide: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				asNavFor: '.big-slider-for',
+				focusOnSelect: true,
+				arrows: false,
+			});
+		});
+	},
 	initMasks: function()
 	{
 		$('.subscribe__input').inputmask({"mask": "+7 999 999 99 99", showMaskOnHover: false, "placeholder": "·"});
@@ -164,12 +205,15 @@ var Abo =
 			{
 				return (($(this).siblings('.resorts__item-value').find('span').text() / max)*50);
 			});
+			$(this).css('opacity', function()
+			{
+				return ($(this).siblings('.resorts__item-value').find('span').text() / max);
+			});
 		});
 		$('.resorts__item-content--hide').find('.resorts__item-column').each(function( index )
 		{
 			$(this).css('height', '0');
 		});
-		// console.log(max);
 	},
 };
 
