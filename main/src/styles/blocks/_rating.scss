@@ -1,0 +1,151 @@
+.rating
+{
+	background-color: #F7F7F7;
+}
+.rating__main
+{
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 42px;
+	padding-bottom: 59px;
+	overflow: hidden;
+}
+h2.rating__title
+{
+	max-width: 804px;
+	padding-left: 160px;
+	padding-right: 160px;
+	margin-bottom: 25px;
+	color: #3A3A3A;
+}
+.rating__descr
+{
+	max-width: 670px;
+	padding-left: 160px;
+	padding-right: 160px;
+	margin: 0 auto;
+	font-family: $regular;
+	font-size: 18px;
+	line-height: 24px;
+	color: #303030;
+	text-align: center;
+	margin-bottom: 32px;
+}
+.rating__wrap
+{
+	position: relative;
+}
+.rating__item-wrap
+{
+
+	width: 801px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	border-radius: 24px;
+	box-shadow: 0 0 20px 5px rgba(48, 48, 48, 0.15);
+	padding: 30px;
+	text-decoration: none;
+}
+.rating__item-left
+{
+	width: 359px;
+	height: 235px;
+	position: relative;
+	margin-right: 23px;
+}
+.rating__view
+{
+	position: absolute;
+	bottom: 19px;
+	left: 25px;
+	span:first-child
+	{
+		padding: 2px 4px;
+		background: #35C677;
+		font-family: $bold;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 24px;
+		color: #FFFFFF;
+		margin-right: 12px;
+	}
+	span:last-child
+	{
+		font-family: $bold;
+		font-weight: bold;
+		font-size: 13px;
+		line-height: 28px;
+		color: #FFFFFF;
+		outline: none;
+	}
+}
+.rating__item-country
+{
+	font-family: $semi;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 14px;
+	color: #303030;
+	margin-bottom: 15px;
+}
+.rating__item-title
+{
+	font-family: $semi;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 26px;
+	color: #303030;
+	margin-bottom: 24px;
+	span:first-child
+	{
+		margin-right: 5px;
+	}
+}
+.rating__item-price
+{
+	font-family: $bold;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 28px;
+	color: #3A3A3A;
+	margin-bottom: 24px;
+}
+.rating__item-descr
+{
+	font-family: $regular;
+	font-size: 14px;
+	line-height: 20px;
+	color: #303030;
+}
+
+@media (max-width: 768px)
+{
+	.rating__item-wrap
+	{
+		width: 276px;
+		flex-direction: column;
+		padding: 20px;
+	}
+	.rating__item-left
+	{
+		width: 100%;
+		height: auto;
+		position: relative;
+		margin-right: 0;
+		margin-bottom: 12px;
+		img
+		{
+			width: 100%;
+		}
+	}
+	.rating__item-title
+	{
+		display: flex;
+		flex-direction: column-reverse;
+		span:last-child
+		{
+			margin-bottom: 8px;
+		}
+	}
+}

@@ -35,6 +35,47 @@
 		padding-top: 36px;
 	}
 }
+.big-slider-for
+{
+	.hotel__slider-big-item:not(:first-child)
+	{
+		display: none;
+	}
+	.big-slick-arrow
+	{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: auto;
+		height: auto;
+		z-index: 1;
+		opacity: 0.8;
+	}
+	.big-slick-prev
+	{
+		transform: translateY(-50%) rotate(-180deg);
+		left: 20px;
+	}
+	.big-slick-next
+	{
+		right: 20px;
+	}
+}
+.big-slider-nav
+{
+	.hotel__slider-item:not(:first-child)
+	{
+		display: none;
+	}
+}
+.slick-initialized .hotel__slider-big-item:not(:first-child)
+{
+	display: block;
+}
+.slick-initialized .hotel__slider-item:not(:first-child)
+{
+	display: block;
+}
 .slick-initialized .slide:first-child
 {
 	padding-top: 0;
@@ -63,7 +104,6 @@
 	transition: 0.3s;
 	border-radius: 6px;
 }
-
 @media (min-width: 1440px)
 {
 	.slider
