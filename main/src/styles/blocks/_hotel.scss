@@ -32,7 +32,7 @@ h2.hotel__title
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	margin-bottom: 29px;
+	margin-bottom: 32px;
 }
 .hotel__top-right
 {
@@ -51,13 +51,20 @@ h2.hotel__title
 }
 .hotel__button
 {
-	background-image: linear-gradient(150.12deg, #3866E6 0%, #557EF3 100%), #0090FF;
+	background-color: #3866E6;
 	border-radius: 8px;
 	padding: 17px 42px;
 	font-family: $regular;
 	font-size: 14px;
 	line-height: 16px;
 	color: #FFFFFF;
+	cursor: pointer;
+	transition: 0.3s;
+	&:hover
+	{
+		background-color: #0090FF;
+		transition: 0.3s;
+	}
 }
 .hotel__place
 {
@@ -92,6 +99,7 @@ h2.hotel__title
 .hotel__slider-item
 {
 	margin-right: 6px;
+	outline: none;
 	img
 	{
 		width: 100px;
@@ -157,10 +165,12 @@ h2.hotel__title
 	color: #0090FF;
 	text-decoration: none;
 	outline: none;
-	border: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+	transition: 0.3s;
 	&:hover
 	{
-		border: 1px solid #0090FF;
+		border-bottom: 1px solid #0090FF;
+		transition: 0.3s;
 	}
 }
 .hotel__advantages
@@ -212,10 +222,12 @@ h2.hotel__title
 	color: #0090FF;
 	text-decoration: none;
 	outline: none;
-	border: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+	transition: 0.3s;
 	&:hover
 	{
-		border: 1px solid #0090FF;
+		border-bottom: 1px solid #0090FF;
+		transition: 0.3s;
 	}
 }
 
@@ -259,16 +271,6 @@ h2.hotel__title
 	{
 		display: none;
 	}
-	.hotel__button
-	{
-		background-image: none;
-		padding: 0;
-		font-family: $regular;
-		font-weight: 600;
-		font-size: 14px;
-		line-height: 16px;
-		color: #0090FF;
-	}
 }
 
 @media (max-width: 768px)
@@ -303,6 +305,23 @@ h2.hotel__title
 		border-top: 1px solid rgba(207, 218, 230, 0.5);
 		padding: 14px 12px;
 	}
+	.hotel__place
+	{
+		margin-bottom: 32px;
+	}
+	.hotel__button
+	{
+		background-color: transparent;
+		color: #0090FF;
+		border-bottom: 1px solid  transparent;
+		border-radius: 0;
+		padding: 0;
+		&:hover
+		{
+			background-color: transparent;
+			border-bottom: 1px solid  #0090FF;
+		}
+	}
 	.hotel__big-slider
 	{
 		max-width: 800px;
@@ -323,9 +342,11 @@ h2.hotel__title
 	.hotel__reviews
 	{
 		width: 100%;
+		margin-bottom: 0;
 	}
 	.hotel__advantages
 	{
 		width: 100%;
+		margin-top: -3px;
 	}
 }

@@ -8,8 +8,6 @@ module.exports = {
 	devtool: "source-map",
 	entry: {
 		index: './src/index.js',
-		country: './src/country.js',
-		// pageThree: './src/pageThree/index.js',
 	},
 	module: {
 		rules: [
@@ -79,6 +77,10 @@ module.exports = {
 		new HtmlWebPackPlugin({
 			template: "./src/template/pages/detail.twig",
 			filename: "./detail.html"
+		}),
+		new HtmlWebPackPlugin({
+			template: "./src/template/pages/hot.twig",
+			filename: "./hot.html"
 		}),
 		new MiniCssExtractPlugin({
 			// Options similar to the same options in webpackOptions.output

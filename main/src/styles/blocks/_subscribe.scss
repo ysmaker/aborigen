@@ -44,7 +44,7 @@ h3.subscribe__title
 {
 	display: flex;
 	justify-content: center;
-	align-items: baseline;
+	align-items: center;
 	margin-bottom: 10px;
 }
 .subscribe__input
@@ -53,8 +53,9 @@ h3.subscribe__title
 	outline: none;
 	border-radius: 8px 0 0 8px;
 	background-color: #fff;
+	font-weight: 600;
 	padding: 18px 25px;
-	font-family: $semi;
+	font-family: monospace;
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0.2px;

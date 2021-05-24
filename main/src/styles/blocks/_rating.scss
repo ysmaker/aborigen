@@ -93,13 +93,21 @@ h2.rating__title
 {
 	font-family: $semi;
 	font-weight: 600;
-	font-size: 30px;
-	line-height: 26px;
+	font-size: 34px;
+	line-height: 34px;
 	color: #303030;
 	margin-bottom: 24px;
-	span:first-child
+	span
 	{
-		margin-right: 5px;
+		&:first-child
+		{
+			min-height: 68px;
+			margin-right: 5px;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+		}
 	}
 }
 .rating__item-price
@@ -117,6 +125,27 @@ h2.rating__title
 	font-size: 14px;
 	line-height: 20px;
 	color: #303030;
+	min-height: 100px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
+	overflow: hidden;
+}
+
+@media (max-width: 1140px)
+{
+	h2.rating__title
+	{
+		max-width: 540px;
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+	.rating__descr
+	{
+		max-width: 690px;
+		padding-left: 45px;
+		padding-right: 45px;
+	}
 }
 
 @media (max-width: 768px)
