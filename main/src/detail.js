@@ -1,1 +1,1 @@
-import html from "./template/pages/country.twig";
+import html from "./template/pages/detail.twig";

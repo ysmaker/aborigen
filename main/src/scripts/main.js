@@ -25,21 +25,49 @@ var Abo =
 		this.toggleMenu();
 		this.tabsClick();
 		this.columnsSize();
+		this.initMap();
 	},
 	initMap: function()
 	{
 
+		var styles =
+		[
+			{
+				"featureType": "landscape.man_made",
+				"elementType": "geometry",
+				"stylers":
+				[
+					{
+						"hue": "#ff0000"
+					}
+				]
+			},
+			{
+				"featureType": "landscape.man_made",
+				"elementType": "geometry.fill",
+				"stylers":
+				[
+					{
+						"hue": "#ff3200"
+					},
+					{
+						"visibility": "on"
+					}
+				]
+			}
+		];
 		var coordinates = {lat: 41.00877381264615, lng: 28.976113208815722},
 			map = new google.maps.Map(document.getElementById('map'), {
 				center: coordinates,
-				zoom: 5,
-				disableDefaultUI: boolean
+				zoom: 9,
+				disableDefaultUI: false
 			});
 		var marker = new google.maps.Marker({
 			position: coordinates,
 			map: map,
 			icon: 'img/marker.svg'
 		});
+		map.setOptions({styles: styles});
 	},
 	toggleMenu: function()
 	{
@@ -80,7 +108,7 @@ var Abo =
 		$('.select__item').on('click', function()
 		{
 			$(this).parents('.select').toggleClass('select--active');
-			$(this).parents('.select').find('.select__current').text($(this).text());
+			$(this).parents('.select').find('.select__current').html($(this).html());
 			$(this).parents('.select').find('.select__icon').toggleClass('select__icon--rotate');
 		});
 		$(document).on('click', function(e)
@@ -139,6 +167,7 @@ var Abo =
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				swipeToSlide: true,
+				touchThreshold: 500,
 				variableWidth: true,
 				prevArrow: "<svg class='slick-prev slick-arrow' width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 -9.39371e-07 24 -2.09815e-06C10.7452 -3.25692e-06 3.25692e-06 10.7452 2.09815e-06 24C9.39371e-07 37.2548 10.7452 48 24 48ZM18.4394 22.9393L25.1894 16.1893C25.4823 15.8964 25.8662 15.7499 26.25 15.7499C27.5743 15.7499 28.2582 17.363 27.3106 18.3105L21.6213 23.9999L27.3106 29.6893C27.8964 30.2751 27.8964 31.2248 27.3106 31.8106C26.7248 32.3963 25.7751 32.3963 25.1893 31.8106L18.4393 25.0606C17.8536 24.4747 17.8536 23.5251 18.4394 22.9393Z' fill='#258EFA'/></svg>",
 				nextArrow: "<svg class='slick-next slick-arrow' width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0ZM29.5606 25.0607L22.8106 31.8107C22.5177 32.1036 22.1338 32.2501 21.75 32.2501C20.4257 32.2501 19.7418 30.637 20.6894 29.6895L26.3787 24.0001L20.6894 18.3107C20.1036 17.7249 20.1036 16.7752 20.6894 16.1894C21.2752 15.6037 22.2249 15.6037 22.8107 16.1894L29.5607 22.9394C30.1464 23.5252 30.1464 24.4749 29.5606 25.0607Z' fill='#258EFA'/></svg>",
@@ -163,6 +192,7 @@ var Abo =
 				infinite: true,
 				variableWidth: true,
 				swipeToSlide: true,
+				touchThreshold: 10,
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				asNavFor: '.big-slider-for',
