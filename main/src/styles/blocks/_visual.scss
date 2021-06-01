@@ -1,0 +1,193 @@
+.visual
+{
+	padding: 33px 160px;
+	padding-bottom: 113px;
+}
+.visual__wrap
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	max-width: 1120px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.visual__left
+{
+	max-width: 235px;
+	margin-right: 32px;
+}
+.visual__left-item
+{
+	&:not(:last-child)
+	{
+		margin-bottom: 24px;
+	}
+}
+.visual__right
+{
+	flex-grow: 1;
+}
+h2.visual__title
+{
+	text-align: left;
+	margin-bottom: 24px;
+}
+.visual__text-wrap
+{
+	background: #F5F5F5;
+	border-radius: 24px;
+	padding: 24px;
+	padding-left: 48px;
+}
+.visual__text
+{
+	p
+	{
+		font-family: $regular;
+		font-size: 14px;
+		line-height: 20px;
+		color: #303030;
+		&:not(:last-child)
+		{
+			margin-bottom: 20px;
+		}
+	}
+	ul
+	{
+		padding-left: 20px;
+		li
+		{
+			font-family: $regular;
+			font-size: 14px;
+			line-height: 20px;
+			color: #303030;
+		}
+	}
+	h3
+	{
+		max-width: 430px;
+		width: 100%;
+		font-family: $semi;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 32px;
+		color: #303030;
+		margin: 0;
+		margin-bottom: 12px;
+	}
+	table
+	{
+		max-width: 600px;
+		width: 100%;
+		font-family: $regular;
+		font-size: 14px;
+		line-height: 18px;
+		color: #000000;
+	}
+	th
+	{
+		padding: 16px 30px;
+		box-sizing: border-box;
+		text-align: left;
+		&:last-child
+		{
+			padding-left: 0;
+			padding-right: 16px;
+		}
+	}
+	td
+	{
+		padding: 16px 30px;
+		box-sizing: border-box;
+		&:first-child
+		{
+			width: 45%;
+		}
+		&:last-child
+		{
+			padding-left: 0;
+			padding-right: 16px;
+		}
+	}
+	tr
+	{
+		th
+		{
+			background-color: #F0F0F0;
+		}
+		&:nth-child(2n)
+		{
+			td
+			{
+				background-color: #fff;
+			}
+		}
+		&:nth-child(2n-1)
+		{
+			td
+			{
+				background-color: #F7F7FA;
+			}
+		}
+	}
+	img
+	{
+		width: 100%;
+	}
+}
+
+@media (max-width: 1360px)
+{
+	.visual
+	{
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+}
+
+@media (max-width: 1024px)
+{
+	.visual__wrap
+	{
+		flex-direction: column-reverse;
+	}
+	.visual__right
+	{
+		margin-bottom: 40px;
+	}
+}
+
+@media (max-width: 768px)
+{
+	.visual
+	{
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 63px;
+	}
+	h2.visual__title
+	{
+		max-width: 227px;
+		padding-left: 13px;
+		padding-right: 13px;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.visual__wrap
+	{
+		align-items: stretch;
+	}
+	.visual__left
+	{
+		max-width: 100%;
+		padding: 0 15px;
+		margin-right: 0;
+	}
+	.visual__text
+	{
+		padding-left: 13px;
+		padding-right: 13px;
+		border-radius: 0;
+	}
+}

@@ -25,6 +25,7 @@ var Abo =
 		this.toggleMenu();
 		this.tabsClick();
 		this.columnsSize();
+		this.textareaEditor();
 		this.initMap();
 	},
 	initMap: function()
@@ -124,8 +125,8 @@ var Abo =
 	{
 		var date = new Date();
 		var defaultDate = date.getDate() + '.' + date.getMonth() + '.' + date.getFullYear() + ' - ' + (date.getDate()+7) + '.' + date.getMonth() + '.' + date.getFullYear();
-		$('.filter__item-input--date').attr('placeholder', defaultDate);
-		$('.filter__item-input--date').datepicker({
+		$('.datepicker-here').attr('placeholder', defaultDate);
+		$('.datepicker-here').datepicker({
 			minDate: new Date(),
 			autoClose: true,
 			offset: 7,
@@ -217,7 +218,6 @@ var Abo =
 
 			slide.find('.resorts__item-content').addClass('resorts__item-content--hide');
 			slide.find('.resorts__item-tabs').find('.resorts__item-content[data-num='+num+']').removeClass('resorts__item-content--hide');
-			console.log(num);
 			Abo.columnsSize();
 		});
 	},
@@ -244,6 +244,21 @@ var Abo =
 		{
 			$(this).css('height', '0');
 		});
+		console.log('fd');
+	},
+	textareaEditor: function()
+	{
+		console.log('1');
+		tinymce.init({
+			selector: '#classic-editor',
+			height: 335,
+			menubar: false,
+			toolbar: 'bold italic backcolor | alignleft aligncenter ' +
+				'alignright alignjustify | bullist numlist outdent indent | ' +
+				'removeformat | help',
+			content_style: 'body { font-size: 13px;line-height: 30px;color: #000000; } h2{font-weight: 600;font-size: 16px;line-height: 30px;color: #000000;}'
+		});
+		console.log(2);
 	},
 };
 

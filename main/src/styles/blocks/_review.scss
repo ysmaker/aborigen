@@ -194,9 +194,6 @@ h2.review__title
 		transition: 0.3s;
 	}
 }
-
-
-
 .review__more
 {
 	background: linear-gradient(150.12deg, #3866E6 0%, #557EF3 100%);
@@ -293,15 +290,6 @@ h2.review__title
 			color: #212B36;
 			display: block;
 		}
-	}
-}
-
-@media (max-width: 1360px)
-{
-	.review
-	{
-		padding-left: 45px;
-		padding-right: 45px;
 	}
 }
 

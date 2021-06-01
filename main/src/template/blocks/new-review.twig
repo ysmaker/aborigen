@@ -1,0 +1,82 @@
+<section class="new-review">
+	<div class="new-review__title-wrap">
+		<div class="new-review__title">
+			Добавить свой отзыв
+		</div>
+		<div class="new-review__subtitle">
+			Мы подобрали только проверенные отели для незабываемого отпуска — вас уже ждут золотистые пляжи и роскошное турецкое море!
+		</div>
+	</div>
+	<div class="new-review__wrap">
+		<div class="new-review__left">
+			<div class="new-review__left-item">
+				{% include "../blocks/vk-subscribe.twig" %}
+			</div>
+		</div>
+		<div class="new-review__right">
+			<div class="new-review__item">
+				<form action="" class="new-review__form">
+					<div class="new-review__inputs">
+						<div class="new-review__inputs-row">
+							<label for="title" class="new-review__label">Название рассказа:</label>
+							<input type="text" id="title" class="new-review__input" placeholder="Как бы Вы искали свой рассказ в поиске?">
+						</div>
+						<div class="new-review__inputs-row">
+							<label for="name" class="new-review__label">Ваше имя:</label>
+							<input type="text" id="name" class="new-review__input" placeholder="Как вас зовут?">
+						</div>
+						<div class="new-review__inputs-row">
+							<label for="place" class="new-review__label">Место отдыха:</label>
+							<input type="text" id="place" class="new-review__input" placeholder="Можно указать несколько">
+						</div>
+						<div class="new-review__inputs-row">
+							<label for="date" class="new-review__label">
+								Дата отдыха:
+								<span>
+									<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-0.000976562 3.2V4.8V14.4C-0.000976562 15.2824 0.716623 16 1.59902 16H12.799C13.6814 16 14.399 15.2824 14.399 14.4V4.8V3.2C14.399 2.3176 13.6814 1.6 12.799 1.6H11.199V0H9.59902V1.6H4.79902V0H3.19902V1.6H1.59902C0.716623 1.6 -0.000976562 2.3176 -0.000976562 3.2ZM12.8006 14.4H1.59902V4.8H12.799L12.8006 14.4Z" fill="#303030"/></svg>
+								</span>
+							</label>
+							<input type="text" id="date" class="new-review__input datepicker-here" data-range="true" data-multiple-dates-separator=" - " placeholder="30.03.2021 - 11.04.2021">
+						</div>
+					</div>
+					<div class="new-review__editor">
+						<label for="place" class="new-review__label">Ваш отзыв: </label>
+						<div class="new-review__editor-descr">
+							Воспользуйтесь <a href="#">справкой</a> при составлении рассказа Рекомендуется размещать фотографии к отзыву, так он будет более интересен читателям.
+						</div>
+						<textarea id="classic-editor" class="new-review__textarea">
+							<h2>This is a WYSIWYG Figma Editor</h2>
+							Gastropub chillwave lumbersexual umami lyft. Poke austin direct trade, marfa raclette letterpress actually. Chartreuse sriracha pinterest twee lo-fi try-hard. Meditation banh mi kitsch, prism organic hot chicken literally heirloom occupy af semiotics food truck.
+							Aesthetic asymmetrical gluten-free, health goth shaman meh lumbersexual bespoke kinfolk helvetica vaporware fashion axe freegan. Pour-over hammock succulents disrupt chartreuse raw denim. Brunch aesthetic fanny pack subway tile everyday carry green juice neutra beard cray small batch poke yuccie plaid pork belly. Blue bottle 8-bit flexitarian hashtag. Scenester marfa yuccie snackwave edison bulb. VHS blog pickled scenester venmo hashtag lo-fi.
+						</textarea>
+					</div>
+					<div class="new-review__inputs">
+						<div class="new-review__inputs-row">
+							<label for="plus" class="new-review__label">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.75 5.25H8.25V8.25H5.25V9.75H8.25V12.75H9.75V9.75H12.75V8.25H9.75V5.25Z" fill="#35C677"/><path d="M9 1.5C4.8645 1.5 1.5 4.8645 1.5 9C1.5 13.1355 4.8645 16.5 9 16.5C13.1355 16.5 16.5 13.1355 16.5 9C16.5 4.8645 13.1355 1.5 9 1.5ZM9 15C5.69175 15 3 12.3082 3 9C3 5.69175 5.69175 3 9 3C12.3082 3 15 5.69175 15 9C15 12.3082 12.3082 15 9 15Z" fill="#35C677"/></svg>
+								Что особенно  понравилось?</label>
+							<input type="text" id="plus" class="new-review__input" placeholder="Вид с номера был замечательный">
+						</div>
+						<div class="new-review__inputs-row">
+							<label for="minus" class="new-review__label">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.25 8.25H12.75V9.75H5.25V8.25Z" fill="#FC594A"/><path d="M9 1.5C4.8645 1.5 1.5 4.8645 1.5 9C1.5 13.1355 4.8645 16.5 9 16.5C13.1355 16.5 16.5 13.1355 16.5 9C16.5 4.8645 13.1355 1.5 9 1.5ZM9 15C5.69175 15 3 12.3082 3 9C3 5.69175 5.69175 3 9 3C12.3082 3 15 5.69175 15 9C15 12.3082 12.3082 15 9 15Z" fill="#FC594A"/></svg>
+								Что не  понравилось?</label>
+							<input type="text" id="minus" class="new-review__input" placeholder="Плохой сервис, дорогие цены">
+						</div>
+						<div class="new-review__inputs-row">
+							<div class="new-review__point">Ваша оценка</div>
+							<div class="new-review__stars">
+								<svg class="_active-star" width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 0.618033L15.5554 8.48278C15.6893 8.8948 16.0732 9.17376 16.5065 9.17376H24.776L18.0858 14.0344C17.7353 14.2891 17.5887 14.7405 17.7225 15.1525L20.2779 23.0172L13.5878 18.1565C13.2373 17.9019 12.7627 17.9019 12.4122 18.1565L5.72206 23.0172L8.27747 15.1525C8.41135 14.7405 8.26469 14.2891 7.9142 14.0344L1.22405 9.17376L9.49353 9.17376C9.92676 9.17376 10.3107 8.8948 10.4446 8.48278L13 0.618033Z" fill="#F2F2F2" stroke="#DBDBDB"/></svg>
+								<svg class="_active-star" width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 0.618033L15.5554 8.48278C15.6893 8.8948 16.0732 9.17376 16.5065 9.17376H24.776L18.0858 14.0344C17.7353 14.2891 17.5887 14.7405 17.7225 15.1525L20.2779 23.0172L13.5878 18.1565C13.2373 17.9019 12.7627 17.9019 12.4122 18.1565L5.72206 23.0172L8.27747 15.1525C8.41135 14.7405 8.26469 14.2891 7.9142 14.0344L1.22405 9.17376L9.49353 9.17376C9.92676 9.17376 10.3107 8.8948 10.4446 8.48278L13 0.618033Z" fill="#F2F2F2" stroke="#DBDBDB"/></svg>
+								<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 0.618033L15.5554 8.48278C15.6893 8.8948 16.0732 9.17376 16.5065 9.17376H24.776L18.0858 14.0344C17.7353 14.2891 17.5887 14.7405 17.7225 15.1525L20.2779 23.0172L13.5878 18.1565C13.2373 17.9019 12.7627 17.9019 12.4122 18.1565L5.72206 23.0172L8.27747 15.1525C8.41135 14.7405 8.26469 14.2891 7.9142 14.0344L1.22405 9.17376L9.49353 9.17376C9.92676 9.17376 10.3107 8.8948 10.4446 8.48278L13 0.618033Z" fill="#F2F2F2" stroke="#DBDBDB"/></svg>
+								<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 0.618033L15.5554 8.48278C15.6893 8.8948 16.0732 9.17376 16.5065 9.17376H24.776L18.0858 14.0344C17.7353 14.2891 17.5887 14.7405 17.7225 15.1525L20.2779 23.0172L13.5878 18.1565C13.2373 17.9019 12.7627 17.9019 12.4122 18.1565L5.72206 23.0172L8.27747 15.1525C8.41135 14.7405 8.26469 14.2891 7.9142 14.0344L1.22405 9.17376L9.49353 9.17376C9.92676 9.17376 10.3107 8.8948 10.4446 8.48278L13 0.618033Z" fill="#F2F2F2" stroke="#DBDBDB"/></svg>
+								<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 0.618033L15.5554 8.48278C15.6893 8.8948 16.0732 9.17376 16.5065 9.17376H24.776L18.0858 14.0344C17.7353 14.2891 17.5887 14.7405 17.7225 15.1525L20.2779 23.0172L13.5878 18.1565C13.2373 17.9019 12.7627 17.9019 12.4122 18.1565L5.72206 23.0172L8.27747 15.1525C8.41135 14.7405 8.26469 14.2891 7.9142 14.0344L1.22405 9.17376L9.49353 9.17376C9.92676 9.17376 10.3107 8.8948 10.4446 8.48278L13 0.618033Z" fill="#F2F2F2" stroke="#DBDBDB"/></svg>
+							</div>
+						</div>
+					</div>
+					<input type="submit" class="new-review__button" value="Опубликовать">
+				</form>
+			</div>
+		</div>
+	</div>
+</section>

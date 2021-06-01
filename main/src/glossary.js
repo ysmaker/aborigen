@@ -1,0 +1,1 @@
+import html from "./template/pages/glossary.twig";
