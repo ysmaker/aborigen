@@ -86,6 +86,22 @@ module.exports = {
 			template: "./src/template/pages/reviews.twig",
 			filename: "./reviews.html"
 		}),
+		new HtmlWebPackPlugin({
+			template: "./src/template/pages/new-review.twig",
+			filename: "./new-review.html"
+		}),
+		new HtmlWebPackPlugin({
+			template: "./src/template/pages/credit.twig",
+			filename: "./credit.html"
+		}),
+		new HtmlWebPackPlugin({
+			template: "./src/template/pages/glossary.twig",
+			filename: "./glossary.html"
+		}),
+		new HtmlWebPackPlugin({
+			template: "./src/template/pages/article.twig",
+			filename: "./article.html"
+		}),
 		new MiniCssExtractPlugin({
 			// Options similar to the same options in webpackOptions.output
 			// both options are optional
