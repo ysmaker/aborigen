@@ -42,9 +42,11 @@ h2.glossary__title
 .glossary__small-items
 {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
 }
 .glossary__small-item
 {
@@ -61,6 +63,8 @@ h2.glossary__title
 	align-items: flex-end;
 	margin-bottom: 10px;
 	z-index: -1;
+	margin-left: 10px;
+	margin-right: 10px;
 	img
 	{
 		position: absolute;
@@ -71,7 +75,6 @@ h2.glossary__title
 	span
 	{
 		display: block;
-		max-width: 124px;
 		font-family: $semi;
 		font-weight: 600;
 		font-size: 16px;
@@ -82,9 +85,11 @@ h2.glossary__title
 .glossary__items
 {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
 }
 .glossary__item
 {
@@ -103,6 +108,8 @@ h2.glossary__title
 	font-size: 16px;
 	line-height: 18px;
 	color: #FFFFFF;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 @media (max-width: 1360px)
