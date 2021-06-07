@@ -1,0 +1,108 @@
+.tour-popup
+{
+	max-width: 1028px;
+	width: 100%;
+	background: #FFFFFF;
+	border-radius: 16px;
+	display: flex;
+}
+.tour-popup__left
+{
+	max-width: 768px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 80px 45px;
+	padding-bottom: 50px;
+}
+.tour-popup__progress
+{
+	position: relative;
+	width: 100%;
+	margin-bottom: 60px;
+	.tour-popup__line
+	{
+		line:last-of-type
+		{
+			stroke: #FFAE00;
+		}
+		circle:first-of-type
+		{
+			fill: #FFAE00;
+		}
+	}
+	.tour-popup__geo
+	{
+		position: absolute;
+		right: -5px;
+		top: -17px;
+	}
+	.tour-popup__fly
+	{
+		position: absolute;
+		left: 172px;
+		top: -11px;
+	}
+}
+.tour-popup__title
+{
+	font-family: $semi;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 20px;
+	color: #000000;
+	text-align: center;
+	margin: 0;
+	margin-bottom: 27px;
+}
+.tour-popup__wrap
+{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+.tour-popup__item
+{
+	max-width: 187px;
+	width: 100%;
+	padding: 14px;
+	background-color: #FFFFFF;
+	border: 1px solid rgba(48, 48, 48, 0.3);
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	cursor: pointer;
+
+}
+.tour-popup__checkbox
+{
+	width: 17px;
+	height: 17px;
+	vertical-align: middle;
+	margin-right: 10px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.tour-popup__label
+{
+	font-family: $regular;
+	font-size: 13px;
+	line-height: 13px;
+	color: #303030;
+	cursor: pointer;
+}
+.tour-popup__checkbox:checked
+{
+	background-color: #FFAE00;
+}
+.tour-popup__main
+{
+	&--hide
+	{
+		display: none;
+	}
+}
