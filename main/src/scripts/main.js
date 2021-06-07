@@ -12,7 +12,7 @@ $(document).ready(function()
 
 
 
-var Abo =
+window.Abo =
 {
 	init()
 	{
@@ -135,6 +135,44 @@ var Abo =
 				days: 'MM'
 			}
 		});
+	},
+	popups:
+	{
+		show(popup)
+		{
+			$('._overlay').addClass('_show');
+			$('body').addClass('ow-hidden');
+			$(popup).addClass('_show');
+
+			setTimeout(()=>
+			{
+				this.addClickOutside(popup);
+			}, 10);
+			console.log(1);
+		},
+		close(popup)
+		{
+			$('._overlay').removeClass('_show');
+			$('body').removeClass('ow-hidden');
+			$(popup).removeClass('_show');
+			this.removeClickOutside();
+		},
+		remove(popup)
+		{
+			$(popup).remove();
+		},
+		removeClickOutside()
+		{
+			$(document).off('click');
+		},
+		addClickOutside(popup)
+		{
+			$(document).on('click',(e)=>
+			{
+				if ($(e.target).closest(popup).length) return;
+				this.close(popup);
+			});
+		},
 	},
 	faqSwitch: function()
 	{
