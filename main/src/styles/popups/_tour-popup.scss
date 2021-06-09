@@ -11,8 +11,10 @@
 	max-width: 768px;
 	box-sizing: border-box;
 	width: 100%;
-	padding: 80px 45px;
+	padding: 65px 45px;
 	padding-bottom: 50px;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 .tour-popup__progress
 {
@@ -24,6 +26,7 @@
 		line:last-of-type
 		{
 			stroke: #FFAE00;
+			transition: 0.5s;
 		}
 		circle:first-of-type
 		{
@@ -39,8 +42,17 @@
 	.tour-popup__fly
 	{
 		position: absolute;
+		transition: 0.5s;
 		left: 172px;
 		top: -11px;
+	}
+	&--second
+	{
+		.tour-popup__fly
+		{
+			transition: 0.5s;
+			left: 420px;
+		}
 	}
 }
 .tour-popup__title
@@ -63,46 +75,290 @@
 	margin-left: -10px;
 	margin-right: -10px;
 }
-.tour-popup__item
+.tour-popup__label
 {
-	max-width: 187px;
-	width: 100%;
-	padding: 14px;
-	background-color: #FFFFFF;
-	border: 1px solid rgba(48, 48, 48, 0.3);
-	box-sizing: border-box;
-	border-radius: 4px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 20px;
-	cursor: pointer;
-
+	&--checkbox
+	{
+		max-width: 200px;
+		width: 100%;
+		padding: 14px;
+		background-color: #FFFFFF;
+		border: 1px solid rgba(48, 48, 48, 0.3);
+		box-sizing: border-box;
+		border-radius: 4px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 20px;
+		cursor: pointer;
+		&--active
+		{
+			border: 1px solid #FFAE00;
+		}
+	}
 }
 .tour-popup__checkbox
 {
-	width: 17px;
-	height: 17px;
-	vertical-align: middle;
-	margin-right: 10px;
-	border-radius: 3px;
-	cursor: pointer;
-}
-.tour-popup__label
-{
-	font-family: $regular;
-	font-size: 13px;
-	line-height: 13px;
-	color: #303030;
-	cursor: pointer;
-}
-.tour-popup__checkbox:checked
-{
-	background-color: #FFAE00;
+	display: none;
+	&:not(checked) + span
+	{
+		display: inline-block;
+		position: relative;
+		width: 17px;
+		height: 17px;
+		border: 1px solid #CCC;
+		background-color: #fff;
+		border-radius: 3px;
+		vertical-align: middle;
+		left: 0;
+		transition: border 0.3s;
+		margin-right: 5px;
+		&:after
+		{
+			content: '';
+			display: block;
+			position: absolute;
+			width: 17px;
+			height: 17px;
+			top: 0;
+			right: 0;
+			background-color: #FFAE00;
+			background-image: url('../img/check.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position-y: -2px;
+			opacity: 0;
+			transition: all .3s;
+		}
+	}
+	&:checked + span
+	{
+		border: 1px solid #FFAE00;
+		border-radius: 3px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		transition: background 0.3s;
+		&:after
+		{
+			opacity: 1;
+		}
+	}
 }
 .tour-popup__main
 {
 	&--hide
 	{
 		display: none;
+	}
+}
+.tour-popup__buttons
+{
+	position: relative;
+}
+.tour-popup__prev
+{
+	position: absolute;
+	vertical-align: middle;
+	font-family: $semi;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 20px;
+	color: #303030;
+	padding: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	svg
+	{
+		vertical-align: middle;
+		margin-right: 9px;
+	}
+}
+.tour-popup__next
+{
+	background: #FFAE00;
+	border-radius: 26px;
+	padding: 15px 32px;
+	font-family: $semi;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 20px;
+	color: #FFFFFF;
+	max-width: 178px;
+	width: 100%;
+	text-align: center;
+	margin-right: 50%;
+	margin-left: calc(50% - 86px);
+}
+.tour-popup__right
+{
+	position: relative;
+	max-width: 260px;
+	width: 100%;
+	background-image: url('../img/popup-bg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top left;
+	border-radius: 0 20px 20px 0;
+	padding: 40px 25px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.tour-popup__manager
+{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.tour-popup__manager-photo
+{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	img
+	{
+		width: 100%;
+		border-radius: 50%;
+	}
+}
+.tour-popup__manager-status
+{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #35C677;
+	&--offline
+	{
+		background-color: red;
+	}
+}
+.tour-popup__manager-name
+{
+	font-family: $semi;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 16px;
+	color: #303030;
+}
+.tour-popup__manager-position
+{
+	font-family: $semi;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 16px;
+	color: #6C6C6C;
+}
+.tour-popup__descr
+{
+	font-family: $regular;
+	font-size: 12px;
+	line-height: 16px;
+	color: #303030;
+}
+.tour-popup__steps-current
+{
+	font-family: $semi;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	color: #303030;
+	margin-bottom: 6px;
+}
+.tour-popup__steps-remains
+{
+	font-family: $semi;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 16px;
+	color: #303030;
+}
+
+@media (max-width: 1100px)
+{
+	.tour-popup
+	{
+		max-width: 968px;
+	}
+	.tour-popup__right
+	{
+		max-width: 200px;
+	}
+}
+
+@media (max-width: 1024px)
+{
+	.tour-popup
+	{
+		max-width: 375px;
+		flex-direction: column-reverse;
+		border-radius: 16px;
+	}
+	.tour-popup__right
+	{
+		max-width: none;
+		background-image: url('../img/popup-bg-mobile.png');
+		border-radius: 16px 16px 0 0;
+		padding: 17px 42px;
+	}
+	.tour-popup__manager
+	{
+		margin-bottom: 30px;
+	}
+	.tour-popup__descr
+	{
+		display: none;
+	}
+	.tour-popup__steps
+	{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.tour-popup__steps-current
+	{
+		margin-bottom: 0;
+		margin-right: 6px;
+	}
+	.tour-popup__progress
+	{
+		display: none;
+	}
+	.tour-popup__left
+	{
+		padding: 15px 13px;
+		padding-bottom: 34px;
+	}
+	.tour-popup__title
+	{
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.tour-popup__wrap
+	{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.tour-popup__label
+	{
+		&--checkbox
+		{
+			font-size: 13px;
+			line-height: 13px;
+			max-width: 170px;
+			margin-left: 3px;
+			margin-right: 3px;
+		}
+	}
+	.tour-popup__next
+	{
+		display: block;
+		margin-left: auto;
+		margin-right: 0;
 	}
 }
