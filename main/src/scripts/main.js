@@ -27,6 +27,10 @@ window.Abo =
 		this.columnsSize();
 		this.textareaEditor();
 		this.checkedLabel();
+		this.range();
+		this.numberStyle();
+		this.wordInNumber();
+		this.disableNumbers();
 		this.initMap();
 	},
 	initMap: function()
@@ -149,7 +153,6 @@ window.Abo =
 			{
 				this.addClickOutside(popup);
 			}, 10);
-			console.log(1);
 		},
 		close(popup)
 		{
@@ -245,6 +248,7 @@ window.Abo =
 	{
 		$('.subscribe__input').inputmask({"mask": "+7 999 999 99 99", showMaskOnHover: false, "placeholder": "·"});
 		$('.filter__item--phone').find('.filter__item-input').inputmask({"mask": "+7 999 999 99 99", showMaskOnHover: false, "placeholder": "·"});
+		$('.tour-popup__item--phone').find('input').inputmask({"mask": "+7 999 999 99 99", showMaskOnHover: false, "placeholder": "·"});
 	},
 	tabsClick: function()
 	{
@@ -283,11 +287,9 @@ window.Abo =
 		{
 			$(this).css('height', '0');
 		});
-		console.log('fd');
 	},
 	textareaEditor: function()
 	{
-		console.log('1');
 		tinymce.init({
 			selector: '#classic-editor',
 			height: 335,
@@ -297,7 +299,6 @@ window.Abo =
 				'removeformat | help',
 			content_style: 'body { font-size: 13px;line-height: 30px;color: #000000; } h2{font-weight: 600;font-size: 16px;line-height: 30px;color: #000000;}'
 		});
-		console.log(2);
 	},
 	checkedLabel: function()
 	{
@@ -314,11 +315,11 @@ window.Abo =
 		{
 			$('.tour-popup__progress').removeClass('tour-popup__progress--second');
 			$('.tour-popup__progress').removeClass('tour-popup__progress--third');
-			$('.tour-popup__line').find('line:last-of-type').attr('x2', '172');
 		}
 		if ($(instance).parents('.tour-popup__main').hasClass('tour-popup__main--third'))
 		{
-			$('.tour-popup__progress').addClass('tour-popup__progress--third');
+			$('.tour-popup__progress').removeClass('tour-popup__progress--third');
+			$('.tour-popup__progress').addClass('tour-popup__progress--second');
 		}
 	},
 	nextStep: function(instance)
@@ -328,16 +329,81 @@ window.Abo =
 		if ($(instance).parents('.tour-popup__main').hasClass('tour-popup__main--first'))
 		{
 			$('.tour-popup__progress').addClass('tour-popup__progress--second');
-			$('.tour-popup__line').find('line:last-of-type').attr('x2', '400');
 		}
 		if ($(instance).parents('.tour-popup__main').hasClass('tour-popup__main--second'))
 		{
 			$('.tour-popup__progress').removeClass('tour-popup__progress--second');
 			$('.tour-popup__progress').addClass('tour-popup__progress--third');
+
 		}
 	},
-};
+	range: function()
+	{
+		$(".js-range-slider").ionRangeSlider({
+			skin: "round",
+			type: "double",
+			grid: false,
+			hide_min_max: true,
+			min: 30000,
+			max: 100000,
+			from: 30000,
+			to: 60000,
+			postfix: " руб.",
+			decorate_both: true
+		});
+	},
+	numberStyle: function()
+	{
+		$('.tour-popup__number').number_plugin({
+			height: '46',
+			width: '186',
+			style: 'line',
+			min: 1,
+			max: 99,
+		});
+	},
+	disableNumbers: function()
+	{
+		$('.tour-popup__number').on('click', function()
+		{
+			if ($('.tour-popup__number')[0].value <= 1)
+			{
+				$('.minus_plugin_number').addClass('minus_plugin_number--disabled');
+				$('.plus_plugin_number').removeClass('plus_plugin_number--disabled');
+			}
+			else if ($('.tour-popup__number')[0].value >= 99)
+			{
+				$('.plus_plugin_number').addClass('plus_plugin_number--disabled');
+				$('.minus_plugin_number').removeClass('minus_plugin_number--disabled');
+			}
+			else
+			{
+				$('.plus_plugin_number').removeClass('plus_plugin_number--disabled');
+				$('.minus_plugin_number').removeClass('minus_plugin_number--disabled');
+			}
+			if ($('.tour-popup__number')[0].value > 99)
+			{
+				$('.input_plugin_number')[0].value = 99;
+				$('.tour-popup__number').value = 99;
+			}
+			if ($('.tour-popup__number')[0].value < 1)
+			{
+				$('.input_plugin_number')[0].value = 1;
+				$('.tour-popup__number').value = 1;
+			}
+		});
+	},
+	wordInNumber: function()
+	{
 
+		$('.tour-popup__number').on('click', function()
+		{
+			var count = $('.tour-popup__number')[0].value;
+			var str = ((((count % 100) >= 10 && count <= 19) || (count % 10) >= 5 || count%10 == 0) ? 'ночей' :  (count % 10 == 1 ? 'ночь' : 'ночи'));
+			$('.tour-popup__number-unit').text(str);
+		});
+	}
+};
 window.onload = function()
 {
 	$('body').removeClass('preload');
